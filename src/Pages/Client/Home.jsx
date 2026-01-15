@@ -17,33 +17,40 @@ const slides = [
   {
     img: slide1,
     text: [
-      "We deliver integrated building",
-      "service solutions with precision",
-      "and reliability",
+      "HVAC Services (Heating, Ventilation",
+      "and Air Conditioning)"
     ],
   },
   {
     img: slide2,
     text: [
-      "Our team ensures quality",
-      "in every project",
-      "with full dedication",
+      "HVAC Services",
+      "(Heating Ventilation",
+      "And Air Conditionaing)",
     ],
+    para: [
+      "We offer end-to-end HVAC services for residential and commercial projects.",
+      "Our systems are designed for maximum comfort and energy efficiency."
+    ]
   },
   {
     img: slide3,
     text: [
-      "Innovative solutions",
-      "for modern buildings",
-      "with efficiency",
+      "We delivers",
+      "integrated building",
+      "services solutions",
+      "with precision and",
+      "relability"
     ],
   },
 ];
 
 const Home = () => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(1);
+  const debug = true;
 
   useEffect(() => {
+    if (debug) return;
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 3000);
@@ -71,17 +78,24 @@ const Home = () => {
                       className="w-full h-full object-cover"
                     />
 
-                    <div className="absolute top-6 left-4 sm:top-12 sm:left-10 md:top-24 md:left-20 text-white max-w-[90%] sm:max-w-xl">
+                    <div className="absolute top-6 left-4 sm:top-8 sm:left-10 md:top-15 md:left-30 text-white max-w-[100%] sm:max-w-3xl">
                       {slide.text.map((line, i) => (
                         <p
                           key={i}
-                          className="text-base sm:text-xl md:text-4xl font-semibold leading-snug sm:leading-normal"
+                          className={`sm:text-xl md:text-4xl font-medium`}
                         >
                           {line}
                         </p>
                       ))}
-
-                      <button className="mt-4 sm:mt-6 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-[#004FA6] hover:bg-blue-700 rounded-lg">
+                      {/* second slide mein para */}
+                      <div className="w-xs md:w-sm mt-4">
+                        {slide.para && (
+                        <p className="mt-2 font-normal text-[10px] sm:text-sm md:text-lg">
+                          {slide.para}
+                        </p>
+                      )}
+                      </div>
+                      <button className="mt-4 sm:mt-6 px-2 sm:px-4 sm:py-3 py-1 text-md sm:text-base bg-[#004FA6] hover:bg-blue-700 rounded-sm">
                         Explore our solutions
                       </button>
                     </div>
@@ -118,16 +132,16 @@ const Home = () => {
                     </div>
 
                     {/*  DESKTOP / TABLET VIEW */}
-                    <div className="hidden md:flex h-full bg-gray-900 text-white">
+                    <div className="hidden md:flex h-full bg-gray-200 text-white">
                       {/* Left Text */}
                       <div className="w-1/2 flex flex-col justify-center px-16">
                         {slide.text.map((line, i) => (
-                          <p key={i} className="text-4xl font-semibold leading-normal">
+                          <p key={i} className="text-5xl font-medium leading-tight text-[#004FA6]">
                             {line}
                           </p>
                         ))}
 
-                        <button className="mt-6 w-fit px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg">
+                        <button className="mt-6 w-fit px-4 cursor-pointer py-2 bg-[#004FA6] hover:bg-blue-700 rounded-sm">
                           Explore our solutions
                         </button>
                       </div>
@@ -162,14 +176,14 @@ const Home = () => {
         </div>
       </div>
       <OurChoice />
-      <Serve/>
-      <Project/>
-      <OurClient/>
-      <Testimonial/>
+      <Serve />
+      <Project />
+      <OurClient />
+      <Testimonial />
       {/* click krne ke baad */}
-      <ServiceSection/>
-      <Industries/>
-      <PartnerShipSection/>
+      <ServiceSection />
+      <Industries />
+      <PartnerShipSection />
     </>
   );
 };
