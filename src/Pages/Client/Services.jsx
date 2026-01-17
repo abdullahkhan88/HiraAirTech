@@ -20,17 +20,17 @@ const Services = () => {
   return (
     <>
       {/* hero section */}
-      <section className="relative bg-gray-100 min-h-[420px] md:min-h-[500px] flex items-center px-4">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <section className="relative bg-gray-200 min-h-[320px] md:min-h-[350px] flex items-center px-4">
+        <div className="max-w-6xl mx-auto w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-4">
 
             {/* LEFT */}
             <div className="text-center md:text-left">
-              <p className="text-blue-600 uppercase tracking-wider font-semibold mb-3">
+              <p className="text-[#004FA6] uppercase tracking-wider font-semibold mb-3">
                 Our Services
               </p>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight space-y-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 leading-thin space-y-1">
                 <p>What we offer?</p>
                 <p>Build with Precision.</p>
                 <p>Design to Scale.</p>
@@ -45,7 +45,7 @@ const Services = () => {
                 offering our clients an integrated, end-to-end solutions.
               </p>
 
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+              <button className="bg-[#004FA6] text-white px-2 md:px-6  py-1 md:py-3 cursor-pointer hover:bg-blue-700 transition">
                 Book the Services
               </button>
             </div>
@@ -55,8 +55,8 @@ const Services = () => {
       </section>
 
       {/* SLIDER SECTION */}
-      <section className="bg-gray-100 py-10 relative overflow-hidden">
-        <div className="overflow-hidden w-full h-[240px] sm:h-[380px] md:h-[600px]">
+      <section className="bg-gray-200 pb-10 relative">
+        <div className="overflow-hidden mx-auto w-[90%] md:w-[80%] h-[200px] sm:h-[380px] md:h-[550px]">
 
           <div
             className="flex h-full transition-transform duration-700 ease-in-out"

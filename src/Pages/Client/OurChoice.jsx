@@ -34,7 +34,7 @@ const OurChoice = () => {
   const [bigIndex, setBigIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
 
-  // 🔥 RESPONSIVE COUNT
+  //  RESPONSIVE COUNT
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) setVisibleCount(1);
@@ -59,7 +59,7 @@ const OurChoice = () => {
     setTopIndex((prev) => (prev === totalSteps - 1 ? 0 : prev + 1));
   };
 
-  // 🔥 BIG SLIDER AUTO
+  //  BIG SLIDER AUTO
   useEffect(() => {
     const timer = setInterval(() => {
       setBigIndex((prev) =>
@@ -73,21 +73,21 @@ const OurChoice = () => {
   return (
     <section className="w-full bg-white py-10">
       {/* HEADER */}
-      <div className="flex justify-between items-center px-6 md:px-8 mb-8">
-        <h1 className="text-blue-700 text-2xl md:text-4xl font-semibold">
+      <div className="flex justify-between items-center p-8 px-3 md:px-3 mb-4 max-w-6xl mx-auto">
+        <h1 className="text-[#004FA6] text-2xl md:text-4xl font-bold">
           Why are <br /> we the best choice?
         </h1>
 
         <div className="flex gap-3">
           <button
             onClick={handlePrev}
-            className="p-3 rounded-full border hover:bg-blue-600 hover:text-white transition"
+            className="p-2 text-[#004FA6] cursor-pointer border hover:bg-blue-600 hover:text-white transition"
           >
             <FaArrowLeft />
           </button>
           <button
             onClick={handleNext}
-            className="p-3 rounded-full border hover:bg-blue-600 hover:text-white transition"
+            className="p-2 text-[#004FA6] cursor-pointer border hover:bg-blue-600 hover:text-white transition"
           >
             <FaArrowRight />
           </button>
@@ -95,7 +95,7 @@ const OurChoice = () => {
       </div>
 
       {/* TOP SLIDER */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden max-w-6xl mx-auto">
         <div
           className="flex transition-transform duration-500"
           style={{ transform: `translateX(-${topIndex * 100}%)` }}
@@ -106,7 +106,7 @@ const OurChoice = () => {
               className="flex-shrink-0 px-4"
               style={{ width: `${100 / visibleCount}%` }}
             >
-              <div className="relative h-[260px] sm:h-[320px] md:h-[400px] overflow-hidden rounded-xl">
+              <div className="relative h-[260px] sm:h-[320px] md:h-[350px] overflow-hidden">
                 <img
                   src={img}
                   alt=""
@@ -119,14 +119,14 @@ const OurChoice = () => {
       </div>
 
       {/* BIG SLIDER */}
-      <div className="relative overflow-hidden mt-16">
+      <div className="relative overflow-hidden mt-10 max-w-6xl mx-auto">
         <div
           className="flex transition-transform duration-700"
           style={{ transform: `translateX(-${bigIndex * 100}%)` }}
         >
           {bigSlides.map((img, i) => (
             <div key={i} className="w-full flex-shrink-0 px-6">
-              <div className="h-[300px] sm:h-[450px] md:h-[650px] rounded overflow-hidden">
+              <div className="h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden">
                 <img
                   src={img}
                   alt=""
@@ -139,13 +139,13 @@ const OurChoice = () => {
       </div>
 
       {/* BOTTOM CONTENT */}
-      <div className="mt-8 mx-6 md:mx-6 flex flex-col md:flex-row items-center justify-between gap-4 bg-gray-50 rounded-xl p-1">
+      <div className="mt-8 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
         <p className="text-gray-700 text-lg max-w-xl">
           Our choice services are designed to deliver quality,
           reliability, and modern solutions tailored to your needs.
         </p>
 
-        <button className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+        <button className="px-8 py-3 bg-[#004FA6] text-white rounded-sm cursor-pointer hover:bg-blue-700 transition">
           Explore More
         </button>
       </div>

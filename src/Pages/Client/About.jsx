@@ -1,9 +1,10 @@
 import symbolimage from "../../assets/AboutAssets/Asset-47.png";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const About = () => {
     return (
         <section
-            className="w-full bg-blue-500 
+            className="w-full bg-[#004FA6] 
             min-h-[600px] md:min-h-[70vh]
             py-16 md:py-20 px-4 flex items-center"
         >
@@ -16,31 +17,31 @@ const About = () => {
 
                 {/* LEFT SIDE */}
                 <div className="flex justify-center md:justify-start px-4 md:px-12">
-                    <div className="flex flex-col justify-between py-6 md:py-12 w-full">
+                    <div className="flex flex-col justify-between px-8 py-12 md:py-12 w-full">
 
                         {/* Heading */}
-                        <h1 className="text-lg md:text-xl font-semibold text-white text-center md:text-left">
+                        <h1 className="text-md md:text-xl font-semibold text-white text-center md:text-left">
                             About Us
                         </h1>
 
                         {/* Arrows */}
                         <div className="flex gap-4 justify-center md:justify-start mt-6 md:mt-0">
                             <button
-                                className="w-10 h-10 md:w-12 md:h-12 
+                                className="w-8 h-8 md:w-10 md:h-10 
                                 border border-white 
                                 flex items-center justify-center 
                                 text-white hover:bg-white hover:text-blue-600 transition"
                             >
-                                ←
+                                <FaArrowLeft/>
                             </button>
 
                             <button
-                                className="w-10 h-10 md:w-12 md:h-12 
+                                className="w-8 h-8 md:w-10 md:h-10 
                                 border border-white 
                                 flex items-center justify-center 
                                 text-white hover:bg-white hover:text-blue-600 transition"
                             >
-                                →
+                                <FaArrowRight/>
                             </button>
                         </div>
                     </div>
@@ -61,16 +62,16 @@ const About = () => {
                     </p>
 
                     {/* STATS */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8">
 
                         {[ 
-                            { value: "10+", label: "Years Experience" },
-                            { value: "250+", label: "Projects Done" },
-                            { value: "100%", label: "Client Satisfaction" }
+                            { value: "10", label: "Years Experience" },
+                            { value: "250", label: "Successful Projects" },
+                            { value: "100", label: "Client Served" }
                         ].map((item, index) => (
                             <div
                                 key={index}
-                                className="relative flex items-center justify-center h-32 md:h-40"
+                                className="relative flex items-center justify-center h-35 md:h-40"
                             >
                                 <img
                                     src={symbolimage}
@@ -79,10 +80,10 @@ const About = () => {
                                 />
 
                                 <div className="absolute text-center">
-                                    <h4 className="text-3xl md:text-4xl font-bold text-blue-700">
+                                    <h4 className="text-2xl md:text-3xl mt-3 font-bold text-[#004FA6]">
                                         {item.value}
                                     </h4>
-                                    <p className="text-gray-700 text-sm md:text-base mt-1">
+                                    <p className="text-gray-500 text-xs md:text-sm mt-4">
                                         {item.label}
                                     </p>
                                 </div>

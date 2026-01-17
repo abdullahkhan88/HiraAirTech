@@ -16,18 +16,19 @@ const Serve = () => {
   }, []);
 
   return (
-    <section className="w-full bg-blue-600 min-h-[90vh] py-10 px-12 flex items-center">
+    <section className="w-full bg-[#004FA6] min-h-[90vh] py-10 px-12 flex items-center">
       <div className="max-w-[1400px] mx-auto w-full">
 
         {/* TOP CONTENT */}
-        <div className="text-center mb-14">
-          <h2 className="text-white text-3xl md:text-5xl font-bold mb-4">
+        <div className="text-center max-w-md mx-auto mt-6">
+          <h2 className="text-white text-2xl md:text-3xl font-semibold mb-4">
             Industries We Serve
           </h2>
-          <p className="text-blue-100 max-w-2xl mx-auto text-base md:text-lg">
+          <p className="text-blue-100 font-leading max-w-2xl mx-auto text-base md:text-lg">
             Established & experienced since 2011, delivering modern and reliable HVAC solutions.
           </p>
-          <button className="text-white border px-4 py-1 mt-3 rounded">
+          <button className="bg-white text-[#004FA6] rounded-sm px-5 py-2 mt-3 font-medium
+              hover:bg-[#004FA6] hover:border-1 cursor-pointer hover:text-white transition duration-300">
             Take a Tour
           </button>
         </div>
