@@ -30,7 +30,7 @@ const About = () => {
                                 className="w-8 h-8 md:w-10 md:h-10 
                                 border border-white 
                                 flex items-center justify-center 
-                                text-white hover:bg-white hover:text-blue-600 transition"
+                                text-white hover:bg-white hover:text-[#004FA6] transition"
                             >
                                 <FaArrowLeft/>
                             </button>
@@ -39,7 +39,7 @@ const About = () => {
                                 className="w-8 h-8 md:w-10 md:h-10 
                                 border border-white 
                                 flex items-center justify-center 
-                                text-white hover:bg-white hover:text-blue-600 transition"
+                                text-white hover:bg-white hover:text-[#004FA6] transition"
                             >
                                 <FaArrowRight/>
                             </button>

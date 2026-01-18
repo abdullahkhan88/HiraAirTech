@@ -24,17 +24,17 @@ const Serve = () => {
           <h2 className="text-white text-2xl md:text-3xl font-semibold mb-4">
             Industries We Serve
           </h2>
-          <p className="text-blue-100 font-leading max-w-2xl mx-auto text-base md:text-lg">
+          <p className="text-blue-100 font-leading max-w-2xl mx-auto text-md md:px-1 px-3 md:text-lg">
             Established & experienced since 2011, delivering modern and reliable HVAC solutions.
           </p>
-          <button className="bg-white text-[#004FA6] rounded-sm px-5 py-2 mt-3 font-medium
-              hover:bg-[#004FA6] hover:border-1 cursor-pointer hover:text-white transition duration-300">
+          <button className="bg-white text-[#004FA6] rounded-sm px-5 py-2 mt-4 font-medium
+              hover:bg-[#004FA6] hover:outline hover:outline-2 hover:outline-white  cursor-pointer hover:text-white transition duration-300">
             Take a Tour
           </button>
         </div>
 
         {/* RIGHT ➜ LEFT SLIDER */}
-        <div className="relative w-full h-[290px] md:h-[700px] overflow-hidden">
+        <div className="relative w-full mx-auto md:max-w-6xl h-[290px] md:h-[650px] overflow-hidden">
 
           {/* TRACK */}
           <div

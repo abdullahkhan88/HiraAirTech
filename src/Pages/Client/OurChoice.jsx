@@ -81,13 +81,13 @@ const OurChoice = () => {
         <div className="flex gap-3">
           <button
             onClick={handlePrev}
-            className="p-2 text-[#004FA6] cursor-pointer border hover:bg-blue-600 hover:text-white transition"
+            className="p-2 text-[#004FA6] cursor-pointer border hover:bg-[#004FA6] hover:text-white transition"
           >
             <FaArrowLeft />
           </button>
           <button
             onClick={handleNext}
-            className="p-2 text-[#004FA6] cursor-pointer border hover:bg-blue-600 hover:text-white transition"
+            className="p-2 text-[#004FA6] cursor-pointer border hover:bg-[#004FA6] hover:text-white transition"
           >
             <FaArrowRight />
           </button>
@@ -139,8 +139,8 @@ const OurChoice = () => {
       </div>
 
       {/* BOTTOM CONTENT */}
-      <div className="mt-8 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
-        <p className="text-gray-700 text-lg max-w-xl">
+      <div className="mt-8 flex gap-3 flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
+        <p className="text-gray-700 text-md md:text-lg max-w-xl md:px-1 px-4">
           Our choice services are designed to deliver quality,
           reliability, and modern solutions tailored to your needs.
         </p>

@@ -29,7 +29,7 @@ const testimonials = [
 const ClientTestimonials = () => {
     return (
         <>
-            <section className="w-full bg-blue-600 py-24">
+            <section className="w-full bg-[#004FA6] py-20">
                 <div className="max-w-7xl mx-auto px-6">
 
                     {/* HEADING */}
@@ -51,10 +51,9 @@ const ClientTestimonials = () => {
 
                                 {/* OVERLAY CONTENT */}
                                 <div className="absolute inset-0 flex flex-col items-center text-center px-8 pt-8">
-
-                                    {/* USER FIRST LETTER CIRCLE */}
+                                  
                                     {/* USER AVATAR + NAME (ROW) */}
-                                    <div className="flex items-center gap-3 mb-4">
+                                    <div className="flex items-center gap-3 mt-6">
                                         <div className="w-12 h-12 rounded-full bg-white text-blue-600 flex items-center justify-center font-bold text-lg">
                                             {item.name.charAt(0)}
                                         </div>
@@ -65,7 +64,7 @@ const ClientTestimonials = () => {
                                     </div>
 
                                     {/* COMMENT */}
-                                    <p className="text-white text-sm leading-relaxed mb-6 px-6">
+                                    <p className="text-white text-sm mt-6 leading-relaxed max-w-[70%]">
                                         “{item.comment}”
                                     </p>
 
@@ -87,34 +86,35 @@ const ClientTestimonials = () => {
 
                 </div>
             </section>
-            {/* secon sections */}
-            <section className="w-full h-[90vh] relative">
+            {/* second sections */}
+            <section className="w-full md:h-[90vh] h-[30vh] relative">
 
                 {/* BACKGROUND IMAGE */}
                 <img
                     src={reachImg}
                     alt="Reach Out Today"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover md:object-cover"
                 />
 
                 {/* OVERLAY */}
-                <div className="absolute inset-0 bg-black/50 flex items-center">
+                <div className="absolute inset-0 top-5 md:top-17">
                     <div className="max-w-4xl px-6 md:px-16">
 
                         {/* HEADING */}
-                        <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
+                        <h2 className="text-[#004FA6] text-2xl md:text-5xl font-semibold">
                             Reach Out Today
                         </h2>
 
                         {/* PARAGRAPH */}
-                        <p className="text-white text-lg md:text-xl leading-relaxed mb-8">
+                        <p className="text-gray-800 max-w-md text-xs md:text-xl leading-tight">
                             Let’s connect and discuss how we can help bring your ideas to life
                             with innovative and reliable solutions.
                         </p>
 
                         {/* BUTTON */}
-                        <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition">
-                            Contact Us
+                        <button className="bg-blue-900 text-white px-3 md:px-6 py-2 md:py-3 mt-2 cursor-pointer
+                          hover:bg-blue-800 transition">
+                            Book the Service
                         </button>
 
                     </div>
