@@ -26,7 +26,7 @@ const testimonials = [
     },
 ];
 
-const ClientTestimonials = () => {
+const Testimonials = () => {
     return (
         <>
             <section className="w-full bg-[#004FA6] py-20">
@@ -125,5 +125,5 @@ const ClientTestimonials = () => {
     );
 };
 
-export default ClientTestimonials;
+export default Testimonials;
 

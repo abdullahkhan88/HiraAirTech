@@ -13,6 +13,9 @@ import ClientLayout from "./Layouts/ClientLayout.jsx";
 import Home from "./Pages/Client/Home.jsx";
 import About from "./Pages/Client/About.jsx";
 import Services from "./Pages/Client/Services.jsx";
+import ServiceSection from "./Pages/Client/ServiceSection.jsx";
+import Project from "./Pages/Client/Project.jsx";
+import PartnerShipSection from "./Pages/Client/PartnerShipSection.jsx";
 
 
 function App() {
@@ -25,6 +28,9 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="services" element={<Services />} />
+          <Route path="service-section" element={<ServiceSection />} />
+          <Route path="project" element={<Project />} />
+          <Route path="partner" element={<PartnerShipSection />} />
 
 
         </Route>

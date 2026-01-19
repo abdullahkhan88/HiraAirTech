@@ -10,11 +10,11 @@ import Services from './Services.jsx'
 import OurChoice from "./OurChoice.jsx";
 import Industries from "./Industries.jsx";
 import Serve from "./Serve.jsx";
-import Project from "./Project.jsx";
+/* import Project from "./Project.jsx"; */
 import OurClient from "./OurClient.jsx";
 import Testimonial from "./Testimonial.jsx";
-import ServiceSection from "./ServiceSection.jsx";
-import PartnerShipSection from "./PartnerShipSection.jsx";
+/* import ServiceSection from "./ServiceSection.jsx"; */
+
 
 const slides = [
   {
@@ -191,12 +191,12 @@ const Home = () => {
       {/* <OurServices/> */}
       <OurChoice />
       <Serve />
-      <Project />
+      
       <OurClient />
       <Testimonial />
-      <ServiceSection />
+      {/* <ServiceSection /> */}
       <Industries />
-      <PartnerShipSection />
+     
     </>
   );
 };

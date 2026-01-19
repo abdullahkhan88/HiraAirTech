@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import slide1 from '../../assets/ServeAssets/Asset-17.png';
 import slide2 from '../../assets/ServeAssets/Asset-18.png';
 import slide3 from '../../assets/ServeAssets/Asset-19.png';
@@ -6,6 +8,7 @@ import slide3 from '../../assets/ServeAssets/Asset-19.png';
 const slides = [slide1, slide2, slide3];
 
 const Serve = () => {
+  const navigate = useNavigate();
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -14,6 +17,10 @@ const Serve = () => {
     }, 3500);
     return () => clearInterval(interval);
   }, []);
+
+  const handleServe = () =>{
+    navigate('project');
+  }
 
   return (
     <section className="w-full bg-[#004FA6] min-h-[90vh] py-10 px-12 flex items-center">
@@ -27,7 +34,7 @@ const Serve = () => {
           <p className="text-blue-100 font-leading max-w-2xl mx-auto text-md md:px-1 px-3 md:text-lg">
             Established & experienced since 2011, delivering modern and reliable HVAC solutions.
           </p>
-          <button className="bg-white text-[#004FA6] rounded-sm px-5 py-2 mt-4 font-medium
+          <button onClick={handleServe} className="bg-white text-[#004FA6] rounded-sm px-5 py-2 mt-4 font-medium
               hover:bg-[#004FA6] hover:outline hover:outline-2 hover:outline-white  cursor-pointer hover:text-white transition duration-300">
             Take a Tour
           </button>

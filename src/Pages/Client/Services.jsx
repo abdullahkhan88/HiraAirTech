@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import serviceSection from './ServiceSection.jsx'
 import slide1 from "../../assets/services/Asset-04.png";
 import slide2 from "../../assets/services/Asset-05.png";
 import slide3 from "../../assets/services/Asset-06.png";
@@ -7,6 +9,8 @@ import slide3 from "../../assets/services/Asset-06.png";
 const slides = [slide1, slide2, slide3];
 
 const Services = () => {
+  const navigate = useNavigate();
+
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -16,6 +20,11 @@ const Services = () => {
 
     return () => clearInterval(interval);
   }, []);
+  
+
+  const handleBookService = () =>{
+    navigate('service-section');
+  }
 
   return (
     <>
@@ -45,7 +54,7 @@ const Services = () => {
                 offering our clients an integrated, end-to-end solutions.
               </p>
 
-              <button className="bg-[#004FA6] text-white px-2 md:px-6  py-1 md:py-3 cursor-pointer hover:bg-blue-700 transition">
+              <button onClick={handleBookService} className="bg-[#004FA6] text-white px-2 md:px-6  py-1 md:py-3 cursor-pointer hover:bg-blue-700 transition">
                 Book the Services
               </button>
             </div>

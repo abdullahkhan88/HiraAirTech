@@ -16,13 +16,9 @@ const ClientLayout = () => {
 
       {/* Footer */}
 
-      <footer className="bg-[#004FA6]  text-white">
+      <footer className="bg-[#004FA6] text-white py-6">
         {/* TOP FOOTER */}
-        <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
-
-          {/* LOGO */}
-
-
+        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 md:border-1 md:border-b-0 gap-10">
           {/* QUICK LINKS */}
           <div>
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
@@ -35,7 +31,7 @@ const ClientLayout = () => {
           </div>
 
           {/* CONTACT US */}
-          <div>
+          <div className="md:border-r-1">
             <h3 className="font-bold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-2 text-sm opacity-90">
               <li> +91 98765 43210</li>
@@ -53,7 +49,7 @@ const ClientLayout = () => {
             </p>
 
           </div>
-          
+
           <div>
             <h2 className="text-2xl font-bold mb-4">HiraAirtech</h2>
             <p className="text-sm leading-relaxed opacity-90">
@@ -64,7 +60,7 @@ const ClientLayout = () => {
         </div>
 
         {/* BOTTOM FOOTER */}
-        <div className="border-t border-white/20">
+        <div className="border-1 border-r-0 border-l-0 border-white">
           <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
 
             {/* COPYRIGHT */}

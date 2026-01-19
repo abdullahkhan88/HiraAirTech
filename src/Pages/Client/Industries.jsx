@@ -28,45 +28,54 @@ const Industries = () => {
   ];
 
   return (
-    <section className="bg-white py-20">
-      <div>
-        <p className="text-blue-600 ml-25 text-sm font-semibold uppercase">
-        Industries We Serve
-      </p>
-      </div>
-      <div className="max-w-4xl mx-auto px-4">
+     <section className="bg-gray-200 py-20">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row">
 
-        {/* Top Heading */}
-        <div className="mb-14 px-8">
-
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-            High performance services <br /> for multiple industries!
-          </h2>
-          <p className="text-gray-600 mt-4 max-w-2xl">
-            Hira Airtek began its operations in 2011 delivering high-quality HVAC
-            solutions and has expanded across multiple industries.
+        {/* LEFT LABEL */}
+        <div className="md:max-w-md flex justify-center md:justify-start mb-6 md:mb-0">
+          <p className="text-blue-900 text-md font-semibold uppercase">
+            Industries We Serve
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid md:grid-cols-2">
-          {data.map((item, index) => (
-            <div key={index} className=''>
-              <img
-                src={item.img}
-                alt={item.title}
-                className="w-90 h-110 object-cover rounded-sm"
-              />
-              <h3 className="text-xl font-semibold text-blue-700 mt-4">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 text-sm mt-2">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+        {/* RIGHT CONTENT */}
+        <div className="md:ml-auto max-w-4xl text-center md:text-left">
 
+          {/* Heading */}
+          <div className="mb-14">
+            <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 mt-2">
+              High performance services <br className="hidden md:block" />
+              for multiple industries!
+            </h2>
+
+            <p className="text-gray-800 mt-4 max-w-2xl mx-auto md:mx-0">
+              Hira Airtek began its operations in 2011 delivering high-quality HVAC
+              solutions and has expanded across multiple industries.
+            </p>
+          </div>
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 place-items-center md:place-items-start">
+            {data.map((item, index) => (
+              <div key={index} className="max-w-sm">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-auto object-cover"
+                />
+
+                <h3 className="text-xl font-semibold text-blue-700 mt-4">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-700 text-sm mt-3">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+        </div>
       </div>
     </section>
   );
