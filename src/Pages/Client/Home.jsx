@@ -191,11 +191,10 @@ const Home = () => {
       {/* <OurServices/> */}
       <OurChoice />
       <Serve />
-      
       <OurClient />
       <Testimonial />
       {/* <ServiceSection /> */}
-      <Industries />
+      
      
     </>
   );
