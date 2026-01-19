@@ -1,5 +1,6 @@
 import symbolimage from "../../assets/AboutAssets/Asset-47.png";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import CountUp from "react-countup";
 
 const About = () => {
     return (
@@ -32,7 +33,7 @@ const About = () => {
                                 flex items-center justify-center 
                                 text-white hover:bg-white hover:text-[#004FA6] transition"
                             >
-                                <FaArrowLeft/>
+                                <FaArrowLeft />
                             </button>
 
                             <button
@@ -41,7 +42,7 @@ const About = () => {
                                 flex items-center justify-center 
                                 text-white hover:bg-white hover:text-[#004FA6] transition"
                             >
-                                <FaArrowRight/>
+                                <FaArrowRight />
                             </button>
                         </div>
                     </div>
@@ -55,16 +56,16 @@ const About = () => {
                         high-quality digital solutions with innovation, precision,
                         and customer satisfaction. Our team believes in building
                         scalable and reliable products for long-term success.
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Iusto error dignissimos earum odio, consequuntur ex!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Voluptate, necessitatibus?
                     </p>
 
                     {/* STATS */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8">
 
-                        {[ 
+                        {[
                             { value: "10", label: "Years Experience" },
                             { value: "250", label: "Successful Projects" },
                             { value: "100", label: "Client Served" }
@@ -79,9 +80,15 @@ const About = () => {
                                     className="w-full h-full object-contain"
                                 />
 
-                                <div className="absolute text-center">
+                                <div className="absolute text-center animate__animated animate__fadeInUp">
                                     <h4 className="text-2xl md:text-3xl mt-3 font-bold text-[#004FA6]">
-                                        {item.value}
+                                        
+                                        <CountUp
+                                            end={item.value}
+                                            duration={2}
+                                            enableScrollSpy
+                                            scrollSpyOnce
+                                        />
                                     </h4>
                                     <p className="text-gray-500 text-xs md:text-sm mt-4">
                                         {item.label}

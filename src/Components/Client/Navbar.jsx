@@ -53,7 +53,7 @@ const Navbar = () => {
         ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}
       >
         <div className="flex flex-col gap-5 px-6 py-6 font-medium">
-          {["Home", "Project", "About", "Services", "Pages", "Contact"].map(
+          {["Home", "Project", "About", "Services", "Contact"].map(
             (item) => (
               <Link
                 key={item}
