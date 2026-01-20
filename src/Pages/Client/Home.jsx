@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "animate.css";
 import slide1 from "../../assets/HomeImage/Home1.svg";
 import slide2 from "../../assets/HomeImage/Home2.jpg";
 import slide3 from "../../assets/HomeImage/Home3.svg";
@@ -78,7 +79,7 @@ const Home = () => {
                       className="w-full h-full object-cover"
                     />
 
-                    <div className="absolute top-6 left-4 sm:top-10 sm:left-10 md:top-24 md:left-24 text-white max-w-xl md:max-w-2xl">
+                    <div className="absolute animate__animated animate__zoomIn animate__delay-1s top-6 left-4 sm:top-10 sm:left-10 md:top-24 md:left-24 text-white max-w-xl md:max-w-2xl">
                       {slide.text.map((line, i) => (
                         <p
                           key={i}
