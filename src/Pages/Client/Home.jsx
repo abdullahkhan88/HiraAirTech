@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "animate.css";
-import slide1 from "../../assets/HomeImage/Home1.svg";
-import slide2 from "../../assets/HomeImage/Home2.jpg";
-import slide3 from "../../assets/HomeImage/Home3.svg";
+import slide1 from "../../assets/HomeImage/Homepage_01.jpg";
+import slide2 from "../../assets/HomeImage/Homepage_02.jpg";
+import slide3 from "../../assets/HomeImage/Homepage_03.jpg";
 
 /* components */
 import About from "./About.jsx";
@@ -21,21 +21,28 @@ const slides = [
   {
     img: slide1,
     text: [
-      "HVAC Services (Heating, Ventilation",
-      "and Air Conditioning)",
+      "HVAC systems executed with",
+      "precision and accountability",
+    ],
+    para: [
+      "From planning to installation, we deliver HVAC",
+      "solutions that perform reliably across commercial.",
+      "and industrial projects",
     ],
   },
   {
     img: slide2,
     text: [
-      "HVAC Services",
-      "(Heating Ventilation",
-      "And Air Conditioning)",
+      "Fire Fighting Systems",
+      "Installed with Complete",
+      "Responsibility",
     ],
-    para: [
-      "We offer end-to-end HVAC services for residential and commercial projects.",
-      "Our systems are designed for maximum comfort and energy efficiency.",
+     para: [
+      "Installed as per safety codes, with careful planning",
+      "and proper site coordination.",
+      
     ],
+
   },
   {
     img: slide3,
@@ -50,9 +57,10 @@ const slides = [
 ];
 
 const Home = () => {
-  const [current, setCurrent] = useState(0);
-
+  const [current, setCurrent] = useState(1);
+  const isanimation = false;
   useEffect(() => {
+    if (!isanimation) return
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 3500);
@@ -79,15 +87,15 @@ const Home = () => {
                       className="w-full h-full object-cover"
                     />
 
-                    <div className="absolute animate__animated animate__zoomIn animate__delay-1s top-6 left-4 sm:top-10 sm:left-10 md:top-24 md:left-24 text-white max-w-xl md:max-w-2xl">
+                    <div className="absolute animate__animated animate__zoomIn animate__delay-1s
+                     top-6 left-4 sm:top-10 sm:left-10 md:top-24 md:left-24 text-white max-w-xl md:max-w-4xl">
                       {slide.text.map((line, i) => (
                         <p
                           key={i}
-                          className={`font-medium ${
-                            index === 1
-                              ? "text-lg sm:text-2xl md:text-5xl"
-                              : "text-base sm:text-xl md:text-4xl"
-                          }`}
+                          className={`font-semibold ${index === 1
+                              ? "text-lg sm:text-2xl md:text-7xl"
+                              : "text-base sm:text-xl md:text-6xl"
+                            }`}
                         >
                           {line}
                         </p>
@@ -95,11 +103,11 @@ const Home = () => {
 
                       {/* SLIDE-2 PARAGRAPH */}
                       {slide.para && (
-                        <div className="mt-4 space-y-2">
+                        <div className="mt-4 space-y-1">
                           {slide.para.map((p, i) => (
                             <p
                               key={i}
-                              className="text-[11px] sm:text-sm md:text-lg font-normal"
+                              className="text-[11px] sm:text-sm md:text-3xl font-normal"
                             >
                               {p}
                             </p>
@@ -107,8 +115,9 @@ const Home = () => {
                         </div>
                       )}
 
-                      <button className="mt-4 sm:mt-6 px-3 sm:px-5 py-1.5 sm:py-3 text-sm sm:text-base bg-[#004FA6] hover:bg-blue-700 rounded-sm">
-                        Explore our solutions
+                      <button className="mt-4 sm:mt-6 px-3 sm:px-5 py-1.5 sm:py-3
+                   text-base sm:text-xl bg-[#004FA6] hover:bg-blue-800 text-white cursor-pointer">
+                        Explore Our Solutions
                       </button>
                     </div>
                   </>
@@ -134,7 +143,7 @@ const Home = () => {
                           </p>
                         ))}
 
-                        <button className="mt-4 w-fit px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 rounded-sm">
+                        <button className="mt-4 w-fit px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700">
                           Explore our solutions
                         </button>
                       </div>
@@ -152,7 +161,7 @@ const Home = () => {
                           </p>
                         ))}
 
-                        <button className="mt-6 w-fit px-5 py-2 bg-[#004FA6] hover:bg-blue-700 rounded-sm text-white">
+                        <button className="mt-6 w-fit px-5 py-2 bg-[#004FA6] hover:bg-blue-700 text-white">
                           Explore our solutions
                         </button>
                       </div>
@@ -177,9 +186,8 @@ const Home = () => {
               <div
                 key={index}
                 onClick={() => setCurrent(index)}
-                className={`h-[3px] w-8 sm:w-16 cursor-pointer transition-all duration-300 ${
-                  current === index ? "bg-blue-500" : "bg-white/60"
-                }`}
+                className={`h-[3px] w-8 sm:w-16 cursor-pointer transition-all duration-300 ${current === index ? "bg-blue-500" : "bg-white/60"
+                  }`}
               />
             ))}
           </div>
@@ -187,16 +195,16 @@ const Home = () => {
       </div>
 
       {/* ================= SECTIONS ================= */}
-      <About/>
-      <Services/>
+      <About />
+      <Services />
       {/* <OurServices/> */}
       <OurChoice />
       <Serve />
       <OurClient />
       <Testimonial />
       {/* <ServiceSection /> */}
-      
-     
+
+
     </>
   );
 };
