@@ -57,8 +57,8 @@ const slides = [
 ];
 
 const Home = () => {
-  const [current, setCurrent] = useState(0);
-  const isanimation = true;
+  const [current, setCurrent] = useState(2);
+  const isanimation = false;
   useEffect(() => {
     if (!isanimation) return
     const interval = setInterval(() => {
@@ -78,7 +78,7 @@ const Home = () => {
           >
 
             {slides.map((slide, index) => (
-              <div key={index} className="min-w-full h-full relative border-2">
+              <div key={index} className="min-w-full h-full relative">
                 {/* ================= SLIDE 1 & 2 ================= */}
                 {index !== 2 && (
                   <>
@@ -89,13 +89,13 @@ const Home = () => {
                     />
 
                     <div className="absolute
-                     top-6 left-4 sm:top-10 sm:left-10 md:top-24 md:left-24 text-white max-w-xl md:max-w-4xl">
+                     top-6 left-4 sm:top-10 sm:left-10 md:top-24 md:left-22 text-white max-w-xl md:max-w-4xl">
                       {slide.text.map((line, i) => (
                         <p
                           key={i}
                           className={`font-semibold ${index === 1
-                            ? "text-lg sm:text-2xl md:text-6xl"
-                            : "text-base sm:text-xl md:text-6xl"
+                            ? "text-lg sm:text-xl md:text-4xl"
+                            : "text-base sm:text-xl md:text-5xl"
                             }`}
                         >
                           {line}
@@ -108,7 +108,7 @@ const Home = () => {
                           {slide.para.map((p, i) => (
                             <p
                               key={i}
-                              className="text-[11px] leading-tight  sm:text-sm md:text-xl font-normal"
+                              className="text-[11px] leading-tight  sm:text-sm md:text-md font-normal"
                             >
                               {p}
                             </p>
@@ -116,9 +116,9 @@ const Home = () => {
                         </div>
                       )}
 
-                      <button className="mt-4 sm:mt-6 px-3 sm:px-5 py-1.5 sm:py-3
-                       text-base sm:text-xl bg-[#004FA6] hover:bg-blue-800 text-white cursor-pointer">
-                        Explore Our Solutions
+                      <button className="mt-4 sm:mt-6 px-2 sm:px-3 py-1 sm:py-3
+                       text-base sm:text-md bg-[#004FA6] hover:bg-blue-800 text-white cursor-pointer">
+                        Explore Our Solution
                       </button>
                     </div>
                   </>
@@ -165,21 +165,21 @@ const Home = () => {
                           className="absolute
                           top-6 left-4
                            sm:top-10 sm:left-10
-                           md:top-24 md:left-24
+                           md:top-24 md:left-22
                             text-white max-w-xl"
                         >
                           {slide.text.map((line, i) => (
                             <p
                               key={i}
-                              className="text-lg sm:text-2xl text-[#004FA6] md:text-[3.25rem] font-semibold leading-tight"
+                              className="text-lg sm:text-2xl text-[#004FA6] md:text-[2rem] font-semibold leading-tight"
                             >
                               {line}
                             </p>
                           ))}
 
                           <button
-                            className="mt-6 px-5 py-2 bg-[#004FA6]
-                             hover:bg-blue-700 text-white text-base sm:text-lg"
+                            className="mt-8 px-2 py-2 bg-[#004FA6]
+                             hover:bg-blue-700 text-white text-base sm:text-md"
                           >
                             Explore our solution
                           </button>
