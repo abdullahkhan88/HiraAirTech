@@ -57,8 +57,8 @@ const slides = [
 ];
 
 const Home = () => {
-  const [current, setCurrent] = useState(2);
-  const isanimation = false;
+  const [current, setCurrent] = useState(0);
+  const isanimation = true;
   useEffect(() => {
     if (!isanimation) return
     const interval = setInterval(() => {
