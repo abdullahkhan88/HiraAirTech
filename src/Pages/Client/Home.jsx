@@ -37,28 +37,28 @@ const slides = [
       "Installed with Complete",
       "Responsibility",
     ],
-     para: [
+    para: [
       "Installed as per safety codes, with careful planning",
       "and proper site coordination.",
-      
+
     ],
 
   },
   {
     img: slide3,
     text: [
-      "We delivers",
-      "integrated building",
-      "services solutions",
-      "with precision and",
-      "reliability",
+      "False ceiling",
+      "works with",
+      "clean finish",
+      "and functional",
+      "design",
     ],
   },
 ];
 
 const Home = () => {
-  const [current, setCurrent] = useState(1);
-  const isanimation = false;
+  const [current, setCurrent] = useState(0);
+  const isanimation = true;
   useEffect(() => {
     if (!isanimation) return
     const interval = setInterval(() => {
@@ -71,30 +71,31 @@ const Home = () => {
     <>
       {/* ================= SLIDER ================= */}
       <div className="relative w-full overflow-hidden">
-        <div className="h-[240px] sm:h-[380px] md:h-[700px]">
+        <div className="aspect-[16/9] w-full">
           <div
             className="flex h-full transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
+
             {slides.map((slide, index) => (
-              <div key={index} className="min-w-full h-full relative">
+              <div key={index} className="min-w-full h-full relative border-2">
                 {/* ================= SLIDE 1 & 2 ================= */}
                 {index !== 2 && (
                   <>
                     <img
                       src={slide.img}
                       alt="slide"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
 
-                    <div className="absolute animate__animated animate__zoomIn animate__delay-1s
+                    <div className="absolute
                      top-6 left-4 sm:top-10 sm:left-10 md:top-24 md:left-24 text-white max-w-xl md:max-w-4xl">
                       {slide.text.map((line, i) => (
                         <p
                           key={i}
                           className={`font-semibold ${index === 1
-                              ? "text-lg sm:text-2xl md:text-7xl"
-                              : "text-base sm:text-xl md:text-6xl"
+                            ? "text-lg sm:text-2xl md:text-6xl"
+                            : "text-base sm:text-xl md:text-6xl"
                             }`}
                         >
                           {line}
@@ -103,11 +104,11 @@ const Home = () => {
 
                       {/* SLIDE-2 PARAGRAPH */}
                       {slide.para && (
-                        <div className="mt-4 space-y-1">
+                        <div className="mt-6 space-y-1">
                           {slide.para.map((p, i) => (
                             <p
                               key={i}
-                              className="text-[11px] sm:text-sm md:text-3xl font-normal"
+                              className="text-[11px] leading-tight  sm:text-sm md:text-xl font-normal"
                             >
                               {p}
                             </p>
@@ -116,7 +117,7 @@ const Home = () => {
                       )}
 
                       <button className="mt-4 sm:mt-6 px-3 sm:px-5 py-1.5 sm:py-3
-                   text-base sm:text-xl bg-[#004FA6] hover:bg-blue-800 text-white cursor-pointer">
+                       text-base sm:text-xl bg-[#004FA6] hover:bg-blue-800 text-white cursor-pointer">
                         Explore Our Solutions
                       </button>
                     </div>
@@ -150,30 +151,42 @@ const Home = () => {
                     </div>
 
                     {/* DESKTOP */}
-                    <div className="hidden md:flex h-full">
-                      <div className="w-1/2 flex flex-col justify-center px-16">
-                        {slide.text.map((line, i) => (
-                          <p
-                            key={i}
-                            className="text-5xl font-medium leading-tight text-[#004FA6]"
-                          >
-                            {line}
-                          </p>
-                        ))}
-
-                        <button className="mt-6 w-fit px-5 py-2 bg-[#004FA6] hover:bg-blue-700 text-white">
-                          Explore our solutions
-                        </button>
-                      </div>
-
-                      <div className="w-1/2 h-full">
+                    {index === 2 && (
+                      <div className="relative w-full h-full">
+                        {/* FULL WIDTH IMAGE */}
                         <img
                           src={slide.img}
                           alt="slide 3"
                           className="w-full h-full object-cover"
                         />
+
+                        {/* TEXT OVER IMAGE – LEFT ALIGNED */}
+                        <div
+                          className="absolute
+                          top-6 left-4
+                           sm:top-10 sm:left-10
+                           md:top-24 md:left-24
+                            text-white max-w-xl"
+                        >
+                          {slide.text.map((line, i) => (
+                            <p
+                              key={i}
+                              className="text-lg sm:text-2xl text-[#004FA6] md:text-[3.25rem] font-semibold leading-tight"
+                            >
+                              {line}
+                            </p>
+                          ))}
+
+                          <button
+                            className="mt-6 px-5 py-2 bg-[#004FA6]
+                             hover:bg-blue-700 text-white text-base sm:text-lg"
+                          >
+                            Explore our solution
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    )}
+
                   </>
                 )}
               </div>
