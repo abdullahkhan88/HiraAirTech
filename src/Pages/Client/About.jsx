@@ -51,15 +51,22 @@ const About = () => {
                 {/* RIGHT SIDE */}
                 <div className="w-full p-6 md:p-12 min-h-[auto] md:min-h-[550px]">
 
-                    <p className="text-white text-sm md:text-base leading-relaxed mb-8 text-center md:text-left">
-                        We are a modern tech-driven company focused on delivering
-                        high-quality digital solutions with innovation, precision,
-                        and customer satisfaction. Our team believes in building
-                        scalable and reliable products for long-term success.
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Iusto error dignissimos earum odio, consequuntur ex!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptate, necessitatibus?
+                    <p className="text-white text-sm md:text-base leading-relaxed mb-4 text-center md:text-left">
+                        Hira Airtek began its journey in 2011 as Rasool Engineers, with a clear
+                        focus on HVAC execution. Based in Lucknow, we have grown steadily
+                        through disciplined execution and responsible project delivery.
+                    </p>
+                    <p className="text-white text-sm md:text-base leading-relaxed mb-4">
+                        Today, operating as Hira Airtek, we provide HVAC systems, fire fighting
+                        services, and false ceiling works, offering clients a single, coordinated
+                        partner for essential building services. Our approach focuses on
+                        correct execution, close site coordination, and delivering systems that
+                        are safe, efficient, and durable.
+                    </p>
+                    <p className="text-white text-sm md:text-base leading-relaxed mb-4">
+                        Backed by a team of skilled professionals and years of hands-on
+                        industry experience, we remain committed to reliability, quality
+                        workmanship, and long-term client satisfaction.
                     </p>
 
                     {/* STATS */}
@@ -82,7 +89,7 @@ const About = () => {
 
                                 <div className="absolute text-center animate__animated animate__fadeInUp">
                                     <h4 className="text-2xl md:text-3xl mt-3 font-bold text-[#004FA6]">
-                                        
+
                                         <CountUp
                                             end={item.value}
                                             duration={2}

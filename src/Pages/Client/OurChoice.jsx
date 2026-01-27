@@ -73,9 +73,9 @@ const OurChoice = () => {
   return (
     <section className="w-full bg-white py-10">
       {/* HEADER */}
-      <div className="flex justify-between items-center p-8 px-3 md:px-3 mb-4 max-w-6xl mx-auto">
-        <h1 className="text-[#004FA6] text-2xl md:text-4xl font-bold">
-          Why are <br /> we the best choice?
+      <div className="flex justify-between items-center mb-4 max-w-7xl mx-auto">
+        <h1 className="text-[#004FA6] text-2xl md:text-5xl font-bold mb-2 md:mb-4">
+          Why Hira Airtek is trusted?
         </h1>
 
         <div className="flex gap-3">
@@ -95,18 +95,18 @@ const OurChoice = () => {
       </div>
 
       {/* TOP SLIDER */}
-      <div className="relative overflow-hidden max-w-6xl mx-auto">
+      <div className="relative overflow-hidden max-w-7xl mx-auto">
         <div
-          className="flex transition-transform duration-500"
+          className="flex transition-transform duration-500 gap-6"
           style={{ transform: `translateX(-${topIndex * 100}%)` }}
         >
           {topSlides.map((img, i) => (
             <div
               key={i}
-              className="flex-shrink-0 px-4"
+              className="flex-shrink-0"
               style={{ width: `${100 / visibleCount}%` }}
             >
-              <div className="relative h-[260px] sm:h-[320px] md:h-[350px] overflow-hidden">
+              <div className="relative h-[260px] sm:h-[320px] md:h-[400px] md:w-[400px] overflow-hidden">
                 <img
                   src={img}
                   alt=""
@@ -119,14 +119,14 @@ const OurChoice = () => {
       </div>
 
       {/* BIG SLIDER */}
-      <div className="relative overflow-hidden mt-10 max-w-6xl mx-auto">
+      <div className="relative overflow-hidden mt-10 max-w-7xl mx-auto">
         <div
           className="flex transition-transform duration-700"
           style={{ transform: `translateX(-${bigIndex * 100}%)` }}
         >
           {bigSlides.map((img, i) => (
-            <div key={i} className="w-full flex-shrink-0 px-6">
-              <div className="h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden">
+            <div key={i} className="w-full flex-shrink-0">
+              <div className="h-[300px] sm:h-[400px] md:h-[600px] overflow-hidden">
                 <img
                   src={img}
                   alt=""
@@ -139,14 +139,15 @@ const OurChoice = () => {
       </div>
 
       {/* BOTTOM CONTENT */}
-      <div className="mt-8 flex gap-3 flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
-        <p className="text-gray-700 text-md md:text-lg max-w-xl md:px-1 px-4">
-          Our choice services are designed to deliver quality,
-          reliability, and modern solutions tailored to your needs.
+      <div className="mt-8 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
+        <p className="text-gray-700 text-md md:text-2xl max-w-2xl py-5">
+          Our role is to simplify execution for our clients by handling
+          our scope responsibly and working seamlessly with other
+          teams on site.
         </p>
 
-        <button className="px-8 py-3 bg-[#004FA6] text-white rounded-sm cursor-pointer hover:bg-blue-700 transition">
-          Explore More
+        <button className="px-8 py-3 bg-[#004FA6] text-white md:text-lg cursor-pointer hover:bg-blue-700 transition">
+          Send Enquiry
         </button>
       </div>
     </section>

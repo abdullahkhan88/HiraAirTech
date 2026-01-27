@@ -20,9 +20,9 @@ const Services = () => {
 
     return () => clearInterval(interval);
   }, []);
-  
 
-  const handleBookService = () =>{
+
+  const handleBookService = () => {
     navigate('service-section');
   }
 
@@ -30,28 +30,31 @@ const Services = () => {
     <>
       {/* hero section */}
       <section className="relative bg-gray-200 min-h-[320px] md:min-h-[350px] flex items-center px-4">
-        <div className="max-w-6xl mx-auto w-full">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-4">
 
             {/* LEFT */}
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left w-sm">
               <p className="text-[#004FA6] uppercase tracking-wider font-semibold mb-3">
                 Our Services
               </p>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 leading-thin space-y-1">
-                <p>What we offer?</p>
-                <p>Build with Precision.</p>
-                <p>Design to Scale.</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-3xl font-semibold text-gray-900 leading-thin space-y-1">
+                Core technical works
+                delivered with precision
+                and accountability
               </h2>
             </div>
 
             {/* RIGHT */}
             <div className="px-0 md:px-6 text-center md:text-left">
               <p className="text-gray-700 mb-6 leading-relaxed text-base sm:text-lg">
-                Today, under the name of Hira Airtech, we provide comprehensive HVAC
-                system, fire-fighting services, and false-ceiling / interior work —
-                offering our clients an integrated, end-to-end solutions.
+                We deliver HVAC systems, fire fighting services, and
+                false ceiling works for commercial and industrial
+                projects. Each service is handled by experienced teams
+                who understand on-site coordination and take
+                responsibility for delivering systems that perform
+                reliably after handover.
               </p>
 
               <button onClick={handleBookService} className="bg-[#004FA6] text-white px-2 md:px-6  py-1 md:py-3 cursor-pointer hover:bg-blue-700 transition">
@@ -65,7 +68,7 @@ const Services = () => {
 
       {/* SLIDER SECTION */}
       <section className="bg-gray-200 pb-10 relative">
-        <div className="overflow-hidden mx-auto w-[90%] md:w-[80%] h-[200px] sm:h-[380px] md:h-[550px]">
+        <div className="overflow-hidden mx-auto w-[90%] md:w-[90%] h-[200px] sm:h-[380px] md:h-[650px]">
 
           <div
             className="flex h-full transition-transform duration-700 ease-in-out"
@@ -96,9 +99,6 @@ const Services = () => {
 
         </div>
       </section>
-
-  
-      
     </>
   );
 };
