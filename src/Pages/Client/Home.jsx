@@ -171,7 +171,7 @@ const Home = () => {
                           {slide.text.map((line, i) => (
                             <p
                               key={i}
-                              className="text-lg sm:text-2xl text-[#004FA6] md:text-[2rem] font-semibold leading-tight"
+                              className="text-lg sm:text-2xl text-[#004FA6] md:text-[2.5rem] font-semibold leading-tight"
                             >
                               {line}
                             </p>
@@ -214,7 +214,7 @@ const Home = () => {
       <OurChoice />
       <Serve />
       <OurClient />
-      <Testimonial />
+     
       {/* <ServiceSection /> */}
 
 

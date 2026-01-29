@@ -152,7 +152,7 @@ const Project = () => {
                                 {/* Project Image */}
                                 <img
                                     src={project.img}
-                                    alt={project.name}
+                                    alt={project.name1}
                                     className="w-full h-[320px] object-cover"
                                 />
 
@@ -170,8 +170,8 @@ const Project = () => {
                                          text-blue-700 font-semibold text-lg
                                           bg-transparent
                                           transition-all duration-300
-                                             group-hover:bg-blue-700
-                                           group-hover:text-white"
+                                          group-hover:bg-blue-700
+                                          group-hover:text-white"
                                         >
                                         <h3>{project?.name1}</h3>
                                         <p>{project?.name2}</p>

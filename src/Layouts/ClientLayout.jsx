@@ -16,52 +16,67 @@ const ClientLayout = () => {
 
       {/* Footer */}
 
-      <footer className="bg-[#004FA6] text-white py-6">
+      <footer className="bg-[#004FA6] text-white py-16">
+        <hr />
         {/* TOP FOOTER */}
-        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 md:border-1 md:border-b-0 gap-10">
+        <div className="max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-4 md:border-t-0 md:border-b-0 gap-10">
           {/* QUICK LINKS */}
-          <div>
-            <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm opacity-90">
-              <li className="hover:underline cursor-pointer">Home</li>
+          <div className="py-6 px-8 border-l-1">
+            <h3 className="font-bold text-md mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-xs opacity-90">
               <li className="hover:underline cursor-pointer">About Us</li>
               <li className="hover:underline cursor-pointer">Services</li>
+              <li className="hover:underline cursor-pointer">Projects</li>
+              <li className="hover:underline cursor-pointer">About</li>
               <li className="hover:underline cursor-pointer">Contact</li>
             </ul>
           </div>
 
           {/* CONTACT US */}
-          <div className="md:border-r-1">
-            <h3 className="font-bold text-lg mb-4">Contact Us</h3>
-            <ul className="space-y-2 text-sm opacity-90">
-              <li> +91 98765 43210</li>
+          <div className="md:border-r-1 py-6 px-8">
+            <h3 className="font-bold text-md mb-4">Contact Us</h3>
+            <ul className="space-y-2 text-xs opacity-90">
+              <li> +9188582 60701, +9177539 15836,
+                +9173797 43372
+              </li>
               <li> info@hiraairtech.com</li>
-              <li> Mon – Sat: 10AM – 6PM</li>
+
             </ul>
           </div>
 
           {/* HEAD OFFICE */}
-          <div>
-            <h3 className="font-bold text-lg mb-4">Head Office</h3>
+          <div className="py-6 px-8">
+            <h3 className="font-bold text-md mb-4">Head Office</h3>
             <p className="text-sm leading-relaxed opacity-90">
-              2nd Floor, Industrial Area,
-              New Delhi – 110001, India
+              P-2, Sapna City Colony,
+              New Gomti Nagar, Lucknow-226028
             </p>
+
+            <div className="mt-6">
+              <h3 className="font-bold text-md mb-4">OUR BRANCH OFFICE</h3>
+              <p className="text-sm leading-relaxed opacity-90">
+                Matiyari Chinhat Chauraha,
+                New Gomti Nagar, Lucknow-226028
+              </p>
+            </div>
 
           </div>
 
-          <div>
+          <div className="py-6 px-8 border-r">
             <h2 className="text-2xl font-bold mb-4">HiraAirtech</h2>
             <p className="text-sm leading-relaxed opacity-90">
-              Delivering reliable air solutions with precision and quality for
-              modern infrastructure.
+              Your trusted partner for
+              complete building solutions.
+              We deliver excellence in air
+              conditioning, fire safety, and
+              interior design.
             </p>
           </div>
         </div>
 
         {/* BOTTOM FOOTER */}
         <div className="border-1 border-r-0 border-l-0 border-white">
-          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row border-l-1 border-r-1 items-center justify-between gap-4">
 
             {/* COPYRIGHT */}
             <p className="text-sm opacity-80">
