@@ -14,6 +14,7 @@ import Serve from "./Serve.jsx";
 /* import Project from "./Project.jsx"; */
 import OurClient from "./OurClient.jsx";
 import Testimonial from "./Testimonial.jsx";
+import Project from "./Project.jsx";
 /* import ServiceSection from "./ServiceSection.jsx"; */
 
 
@@ -213,6 +214,7 @@ const Home = () => {
       {/* <OurServices/> */}
       <OurChoice />
       <Serve />
+      <Project/>
       <OurClient />
      
       {/* <ServiceSection /> */}

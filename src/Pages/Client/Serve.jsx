@@ -19,7 +19,7 @@ const Serve = () => {
   }, []);
 
   const handleServe = () => {
-    navigate('project');
+    navigate('industries');
   }
 
   return (

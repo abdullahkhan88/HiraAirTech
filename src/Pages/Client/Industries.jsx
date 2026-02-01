@@ -6,51 +6,73 @@ import img4 from '../../assets/IndustriesAssets/Asset-32.png';
 const Industries = () => {
   const data = [
     {
-      title: "Building Owners",
+      title: "Commercial Buildings",
       img: img1,
-      desc: "We deliver efficient HVAC systems for commercial and residential buildings with long-term performance and reliability.",
+      desc: `We execute HVAC, fire-fighting, and ceiling works
+             for offices and commercial spaces, with a focus on
+             thermal comfort, safety compliance, clean finishes,
+             and smooth system performance in active work
+             environments.
+            `,
     },
     {
-      title: "Manufacturers",
+      title: "Healthcare & Institutions",
       img: img2,
-      desc: "Our solutions support manufacturing facilities with energy-efficient and scalable HVAC infrastructure.",
+      desc: `Hospitals and institutional buildings demand
+             precise execution and uninterrupted performance.
+             We deliver HVAC, fire safety, and ceiling works with
+             careful attention to hygiene, airflow control, and
+             regulatory standards.
+            `,
     },
     {
-      title: "Contractors",
+      title: "Retail & Public Spaces",
       img: img3,
-      desc: "We work closely with contractors to deliver smooth project execution and technical excellence.",
+      desc: `In malls and high-footfall public spaces, we
+            execute integrated services that balance comfort,
+            safety, and aesthetics, ensuring efficient air
+            distribution, compliance, and clean architectural
+            integration.
+          `,
     },
     {
-      title: "Architects",
+      title: "Industrial Facilities",
       img: img4,
-      desc: "Architect-friendly HVAC designs that align with aesthetics, sustainability, and performance goals.",
+      desc: `For factories and industrial units, we deliver
+            systems designed for higher loads, durability, and
+            safety compliance, coordinating closely with plant
+            layouts, machinery
+          `,
     },
   ];
 
   return (
-     <section className="bg-gray-200 py-20">
+    <section className="bg-gray-100 py-20">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row">
 
         {/* LEFT LABEL */}
         <div className="md:max-w-md flex justify-center md:justify-start mb-6 md:mb-0">
-          <p className="text-blue-900 text-md font-semibold uppercase">
-            Industries We Serve
+          <p className="text-[#004FA6] text-xl font-semibold uppercase">
+            INDUSTRIES WE SERVE
           </p>
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="md:ml-auto max-w-4xl text-center md:text-left">
+        <div className="md:ml-auto max-w-4xl ">
 
           {/* Heading */}
-          <div className="mb-14">
-            <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 mt-2">
-              High performance services <br className="hidden md:block" />
-              for multiple industries!
+          <div className="py-6  max-w-xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold  text-gray-900 mt-2">
+              Experience across <br className="hidden md:block" />
+              multiple industry sectors
             </h2>
 
-            <p className="text-gray-800 mt-4 max-w-2xl mx-auto md:mx-0">
-              Hira Airtek began its operations in 2011 delivering high-quality HVAC
-              solutions and has expanded across multiple industries.
+            <p className="text-gray-800 text-xl py-4 max-w-2xl mx-auto">
+              Hira Airtek works across environments where HVAC,
+              fire safety, and ceiling systems are critical to daily
+              operations. Our role remains focused on disciplined
+              execution, coordination, and delivering systems that
+              perform reliably on site.
             </p>
           </div>
 
@@ -64,11 +86,11 @@ const Industries = () => {
                   className="w-full h-auto object-cover"
                 />
 
-                <h3 className="text-xl font-semibold text-blue-700 mt-4">
+                <h3 className="text-2xl font-semibold text-[#004FA6] mt-4">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-700 text-sm mt-3">
+                <p className="text-gray-800 text-md leading-tight mt-3">
                   {item.desc}
                 </p>
               </div>

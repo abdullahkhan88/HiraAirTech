@@ -15,42 +15,26 @@ const OurServices = () => {
   }
 
   return (
-    <section className="w-full bg-gray-100 py-20">
+    <section className="w-full bg-gray-100 py-10">
       <div className="max-w-6xl mx-auto bg-white shadow-lg">
-
-        {/* TOP BANNER */}
-        <div className="bg-[#004FA6]  text-white p-12 grid md:grid-cols-2 gap-6">
-          <h2 className="text-3xl md:text-4xl font-semibold">
-            Built With Precision.<br />Designed To Scale.
-          </h2>
-
-          <div>
-            <p className="text-sm leading-relaxed mb-4 opacity-90">
-              We deliver integrated building service solutions with precision,
-              efficiency and modern engineering standards.
-            </p>
-            <button className="bg-white text-blue-900 px-5 py-2 font-medium">
-              Get Free Quotation
-            </button>
-          </div>
-        </div>
 
         {/* SERVICE 1 */}
         <div className="grid md:grid-cols-2 gap-10 p-10 items-center">
-          <div>
-            {/* Heading with small image */}
-            <div className="flex items-center gap-3 mt-4 mb-2">
+
+          {/* LEFT CONTENT */}
+          <div className="px-5">
+            <div className="flex gap-3 mt-4 mb-2">
               <img
-                src={img6} // yahan choti image ka path
+                src={img6}
                 alt="icon"
-                className="w-8 h-8 object-contain"
+                className="w-16 h-16 object-contain"
               />
-              <h3 className="text-xl font-semibold text-blue-900">
+              <h3 className="text-3xl font-bold text-[#004FA6]">
                 HVAC Systems
               </h3>
             </div>
 
-            <p className="text-sm text-gray-600 mb-3">
+            <p className="text-lg md:ml-18 leading-tight text-gray-600">
               We execute complete HVAC works covering
               planning, installation, commissioning, and
               maintenance for commercial and industrial
@@ -60,37 +44,66 @@ const OurServices = () => {
               coordination.
             </p>
 
-            <ul className="text-sm text-gray-700 space-y-1">
-              <li>• HVAC Installation</li>
-              <li>• VRF / VRV Systems</li>
-              <li>• Ventilation Systems</li>
-              <li>• Central Cooling</li>
-            </ul>
+            <div className="mt-6">
+              <ul className="text-sm text-gray-700 md:ml-20 space-y-2">
+                <li className="flex items-center font-bold text-[#004FA6] text-xl gap-4">
+                  <span className="w-2.5 h-2.5 bg-[#004FA6]"></span>
+                  HVAC Installation
+                </li>
+                <li className="flex items-center font-bold text-[#004FA6] text-xl gap-4">
+                  <span className="w-2.5 h-2.5 bg-[#004FA6]"></span>
+                  VRF / VRV Systems
+                </li>
+                <li className="flex items-center font-bold text-[#004FA6] text-xl gap-4">
+                  <span className="w-2.5 h-2.5 bg-[#004FA6]"></span>
+                  Ventilation Systems
+                </li>
+                <li className="flex items-center font-bold text-[#004FA6] text-xl gap-4">
+                  <span className="w-2.5 h-2.5 bg-blue-900"></span>
+                  Central Cooling
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <img
-            src={img3}
-            alt="HVAC"
-            className="w-full"
-          />
+          {/* RIGHT IMAGE */}
+          <div className="w-full">
+            <img
+              src={img3}
+              alt="HVAC"
+              className="w-full h-[260px] sm:h-[320px] md:h-[360px] lg:h-[420px] object-cover"
+            />
+          </div>
+
         </div>
 
-        {/* SERVICE 2 */}
-        <div className="grid md:grid-cols-2 gap-10 p-10 bg-gray-200 items-center">
-          <img
-            src={img2}
-            alt="Fire Fighting"
-            className="w-full"
-          />
 
-          <div>
-            <div className='flex items-center gap-3 mb-4'>
-              <img src={img4} alt="" srcset="" className="w-12 h-12 object-contain" />
-              <h3 className="text-2xl font-semibold text-blue-900 mb-2">
+        {/* SERVICE 2 */}
+        <div className="grid md:grid-cols-2 gap-10 p-10 bg-gray-200 ">
+
+          {/* LEFT IMAGE */}
+          <div className="w-full">
+            <img
+              src={img2}
+              alt="Fire Fighting"
+              className="w-full h-[260px] sm:h-[320px] md:h-[360px] lg:h-[420px] object-cover"
+            />
+          </div>
+
+          {/* RIGHT CONTENT */}
+          <div className="px-5">
+            <div className="flex items-center gap-3 mb-2">
+              <img
+                src={img4}
+                alt=""
+                className="w-15 h-15 object-contain"
+              />
+              <h3 className="text-3xl font-semibold text-blue-900">
                 Fire-Fighting Services
               </h3>
             </div>
-            <p className="text-md text-gray-600 mb-3">
+
+            <p className="text-lg md:ml-18 leading-tight text-gray-700">
               We execute fire-fighting systems including
               sprinklers and fire alarm systems in line with
               approved drawings and applicable safety
@@ -98,25 +111,41 @@ const OurServices = () => {
               coordination, and smooth approvals without
               last-minute site issues.
             </p>
-            <ul className="text-sm text-gray-700 space-y-1">
-              <li>• Sprinkler Systems</li>
-              <li>• Fire Alarm Installation</li>
-              <li>• Compliance Certified</li>
-              <li>• Testing & Approvals</li>
-            </ul>
+
+            <div className="mt-6">
+              <ul className="md:ml-20 space-y-3">
+                <li className="flex items-center gap-4 text-xl font-bold text-[#004FA6]">
+                  <span className="w-3 h-3 bg-[#004FA6] inline-block"></span>
+                  Sprinkler Systems
+                </li>
+                <li className="flex items-center gap-4 text-xl font-bold text-[#004FA6]">
+                  <span className="w-3 h-3 bg-[#004FA6] inline-block"></span>
+                  Fire Alarm Installation
+                </li>
+                <li className="flex items-center gap-4 text-xl font-bold text-[#004FA6]">
+                  <span className="w-3 h-3 bg-[#004FA6] inline-block"></span>
+                  Compliance Certified
+                </li>
+                <li className="flex items-center gap-4 text-xl font-bold text-[#004FA6]">
+                  <span className="w-3 h-3 bg-[#004FA6] inline-block"></span>
+                  Testing & Approvals
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
+
         {/* SERVICE 3 */}
-        <div className="grid md:grid-cols-2 gap-10 p-10 items-center">
-          <div className='max-w-md p-6'>
-            <div className='flex gap-4'>
-              <img src={img5} alt="" srcset="" className='w-12 h-12' />
-              <h3 className="text-3xl font-bold text-blue-900 mb-2">
+        <div className="grid md:grid-cols-2 gap-10 p-10">
+          <div className='max-w-md px-6'>
+            <div className='flex gap-6'>
+              <img src={img5} alt="" srcset="" className='w-14 h-14' />
+              <h3 className="text-3xl font-bold text-[#004FA6]">
                 False Ceiling and Interior Works
               </h3>
             </div>
-            <p className="text-md text-gray-600  mb-4">
+            <p className="text-lg md:ml-18 leading-tight mt-3 text-gray-700">
               We execute false ceiling works for offices,
               hospitals, malls, and institutional buildings.
               The focus here is not decoration, but
@@ -124,21 +153,35 @@ const OurServices = () => {
               coordination with lighting and other services
               to ensure the ceiling works as intended.
             </p>
-             <ul className="text-sm text-gray-700 space-y-1 mb-4">
-              <li>• Gypsum Ceilings</li>
-              <li>• Metal Ceilings</li>
-              <li>• Grid Systems</li>
-            </ul>
-            <button onClick={handlePartner} className="bg-blue-900 text-white px-5 py-2 cursor-pointer">
+            <div className='mt-4'>
+              <ul className="md:ml-20 space-y-3 mb-4">
+                <li className="flex items-center gap-4 text-xl font-bold text-[#004FA6]">
+                  <span className="w-3 h-3 bg-[#004FA6] inline-block"></span>
+                  Gypsum Ceilings
+                </li>
+                <li className="flex items-center gap-4 text-xl font-bold text-[#004FA6]">
+                  <span className="w-3 h-3 bg-[#004FA6] inline-block"></span>
+                  Metal Ceilings
+                </li>
+                <li className="flex items-center gap-4 text-xl font-bold text-[#004FA6]">
+                  <span className="w-3 h-3 bg-[#004FA6] inline-block"></span>
+                  Grid Systems
+                </li>
+              </ul>
+            </div>
+
+            <button onClick={handlePartner} className="bg-[#004FA6] md:ml-18 text-white px-5 py-2 cursor-pointer">
               Explore the Service
             </button>
           </div>
 
-          <img
-            src={img1}
-            alt="Interior"
-            className="w-full"
-          />
+          <div className="w-full">
+            <img
+              src={img1}
+              alt="Fire Fighting"
+              className="w-full h-[260px] sm:h-[320px] md:h-[360px] lg:h-[420px] object-cover"
+            />
+          </div>
         </div>
 
       </div>
