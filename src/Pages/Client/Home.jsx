@@ -179,7 +179,7 @@ const Home = () => {
                           ))}
 
                           <button
-                            className="mt-8 px-2 py-2 bg-[#004FA6]
+                            className="mt-8 md:px-3 md:py-3 bg-[#004FA6]
                              hover:bg-blue-700 text-white text-base sm:text-md"
                           >
                             Explore our solution
@@ -195,12 +195,12 @@ const Home = () => {
           </div>
 
           {/* ================= INDICATORS ================= */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+          <div className="absolute  bottom-5 md:bottom-15 left-1/2 -translate-x-1/2 flex gap-2 z-20">
             {slides.map((_, index) => (
               <div
                 key={index}
                 onClick={() => setCurrent(index)}
-                className={`h-[3px] w-8 sm:w-16 cursor-pointer transition-all duration-300 ${current === index ? "bg-blue-500" : "bg-white/60"
+                className={`h-[3px] w-8 sm:w-30 cursor-pointer transition-all duration-300 ${current === index ? "bg-blue-500" : "bg-white/60"
                   }`}
               />
             ))}

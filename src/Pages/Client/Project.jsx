@@ -15,8 +15,8 @@ import project9 from '../../assets/ProjectAssets/Asset-28.png';
 const projects = [
     {
         img: project1,
-        name1: "JNPC",
-        name2: "Lucknow Gomtinagar"
+        name1: "PULSE HOSPITAL",
+        name2: "Lucknow"
     },
     {
         img: project2,
@@ -31,7 +31,7 @@ const projects = [
     {
         img: project4,
         name1: "JNPC",
-        name2: "Lucknow Gomtinagar"
+        name2: "Gomtinagar Lucknow"
     },
     {
         img: project5,
@@ -40,8 +40,8 @@ const projects = [
     },
     {
         img: project6,
-        name1: "JNPC",
-        name2: "Lucknow Gomtinagar"
+        name1: "DEORIA MEDICAL COLLEGE",
+        name2: "Deoria"
     },
     {
         img: project7,
@@ -50,8 +50,8 @@ const projects = [
     },
     {
         img: project8,
-        name1: "JNPC",
-        name2: "Lucknow Gomtinagar"
+        name1: "null",
+        name2: "null"
     },
     {
         img: project9,

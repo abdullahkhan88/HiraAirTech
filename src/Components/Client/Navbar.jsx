@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import NavLogo from "../../assets/NavAssets/hiralogo.svg";
+import NavLogo from "../../assets/NavAssets/HiraAirtek.svg";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
