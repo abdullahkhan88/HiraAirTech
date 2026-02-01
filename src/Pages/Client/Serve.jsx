@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import slide1 from '../../assets/ServeAssets/Asset-17.png';
-import slide2 from '../../assets/ServeAssets/Asset-18.png';
-import slide3 from '../../assets/ServeAssets/Asset-19.png';
+import slide1 from '../../assets/ServeAssets/Industries-01.png';
+import slide2 from '../../assets/ServeAssets/Industries-02.png';
+import slide3 from '../../assets/ServeAssets/Industries-03.png';
 
 const slides = [slide1, slide2, slide3];
 
@@ -28,16 +28,16 @@ const Serve = () => {
 
         {/* TOP CONTENT */}
         <div className="text-center max-w-full mx-auto mt-6">
-          <h2 className="text-white text-2xl md:text-3xl font-semibold mb-4">
+          <h2 className="text-white text-2xl md:text-5xl font-bold mb-4">
             Industries we’ve worked across
           </h2>
-          <p className="text-blue-100 font-leading max-w-3xl mx-auto text-md md:px-1 px-3 md:text-lg">
+          <p className="text-blue-100 font-leading max-w-4xl mx-auto text-md md:text-2xl">
             Over the years, Hira Airtek has executed works across diverse industry environments from
             building owners and contractors to architects and manufacturers. Explore the industries we’ve
             served to see where our experience comes from.
           </p>
-          <button onClick={handleServe} className="bg-white text-[#004FA6] px-8 py-2 mt-4 font-medium
-              hover:bg-[#004FA6] hover:outline hover:outline-2 hover:outline-white md:text-lg
+          <button onClick={handleServe} className="bg-white text-[#004FA6] px-14 py-4 mt-6 font-medium
+              hover:bg-[#004FA6] hover:outline hover:outline-2 hover:outline-white md:text-2xl
                 cursor-pointer hover:text-white transition duration-300">
             Take a Tour
           </button>

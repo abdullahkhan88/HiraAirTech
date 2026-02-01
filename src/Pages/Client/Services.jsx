@@ -30,16 +30,17 @@ const Services = () => {
     <>
       {/* hero section */}
       <section className="relative bg-gray-200 min-h-[320px] md:min-h-[350px] flex items-center px-4">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2  py-28">
 
             {/* LEFT */}
-            <div className="text-center md:text-left w-sm">
-              <p className="text-[#004FA6] uppercase tracking-wider font-semibold mb-3">
+            <div className="text-center md:text-left w-md">
+              <p className="text-[#004FA6] uppercase text-xl font-semibold mb-3">
                 Our Services
               </p>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-3xl font-semibold text-gray-900 leading-thin space-y-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold
+               text-gray-900 leading-thin space-y-4">
                 Core technical works
                 delivered with precision
                 and accountability
@@ -47,8 +48,8 @@ const Services = () => {
             </div>
 
             {/* RIGHT */}
-            <div className="px-0 md:px-6 text-center md:text-left">
-              <p className="text-gray-700 mb-6 leading-relaxed text-base sm:text-lg">
+            <div className="">
+              <p className="text-gray-700 mb-6 leading-tight text-base sm:text-2xl">
                 We deliver HVAC systems, fire fighting services, and
                 false ceiling works for commercial and industrial
                 projects. Each service is handled by experienced teams
@@ -57,8 +58,9 @@ const Services = () => {
                 reliably after handover.
               </p>
 
-              <button onClick={handleBookService} className="bg-[#004FA6] text-white px-2 md:px-6  py-1 md:py-3 cursor-pointer hover:bg-blue-700 transition">
-                Book the Services
+              <button onClick={handleBookService} className="bg-[#004FA6] text-white px-2 md:px-8  py-1 md:py-2
+               cursor-pointer text-2xl hover:bg-blue-700 transition">
+                View Services
               </button>
             </div>
 

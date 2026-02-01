@@ -71,28 +71,29 @@ const OurChoice = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white py-10">
+    <section className="w-full bg-white py-20">
       {/* HEADER */}
-      <div className="flex justify-between items-center mb-4 max-w-7xl mx-auto">
-        <h1 className="text-[#004FA6] text-2xl md:text-5xl font-bold mb-2 md:mb-4">
+      <div className="flex justify-between items-center max-w-7xl mx-auto  py-10">
+        <h1 className="text-[#004FA6] tracking-tight flex items-center text-2xl md:text-5xl font-bold">
           Why Hira Airtek is trusted?
         </h1>
 
-        <div className="flex gap-3">
+        <div className="flex items-center gap-3">
           <button
             onClick={handlePrev}
-            className="p-2 text-[#004FA6] cursor-pointer border hover:bg-[#004FA6] hover:text-white transition"
+            className="p-2 text-[#004FA6] border hover:bg-[#004FA6] hover:text-white transition"
           >
             <FaArrowLeft />
           </button>
           <button
             onClick={handleNext}
-            className="p-2 text-[#004FA6] cursor-pointer border hover:bg-[#004FA6] hover:text-white transition"
+            className="p-2 text-[#004FA6] border hover:bg-[#004FA6] hover:text-white transition"
           >
             <FaArrowRight />
           </button>
         </div>
       </div>
+
 
       {/* TOP SLIDER */}
       <div className="relative overflow-hidden max-w-7xl mx-auto">
@@ -139,14 +140,15 @@ const OurChoice = () => {
       </div>
 
       {/* BOTTOM CONTENT */}
-      <div className="mt-8 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
-        <p className="text-gray-700 text-md md:text-2xl max-w-2xl py-5">
+      <div className="mt-8 flex flex-col md:flex-row
+       items-center justify-between max-w-7xl mx-auto">
+        <p className="text-gray-700  text-md md:text-3xl max-w-3xl py-5">
           Our role is to simplify execution for our clients by handling
           our scope responsibly and working seamlessly with other
           teams on site.
         </p>
 
-        <button className="px-8 py-3 bg-[#004FA6] text-white md:text-lg cursor-pointer hover:bg-blue-700 transition">
+        <button className="px-17 py-1.5 bg-[#004FA6] text-white md:text-2xl cursor-pointer transition">
           Send Enquiry
         </button>
       </div>

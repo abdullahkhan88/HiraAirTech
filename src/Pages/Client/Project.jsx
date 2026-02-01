@@ -16,17 +16,18 @@ const projects = [
     {
         img: project1,
         name1: "PULSE HOSPITAL",
-        name2: "Lucknow"
+        name2: "Rai Bareilly Road"
     },
     {
         img: project2,
-        name1: "JNPC",
-        name2: "Lucknow Gomtinagar"
+        name1: "KGMU",
+        name2: "Lucknow"
     },
     {
         img: project3,
-        name1: "JNPC",
-        name2: "Lucknow Gomtinagar"
+        name1: "GARDEN BAY",
+
+        name2: "IIM Road, Lucknow"
     },
     {
         img: project4,
@@ -35,7 +36,7 @@ const projects = [
     },
     {
         img: project5,
-        name1: "JNPC",
+        name1: "RM LOHIYA",
         name2: "Lucknow Gomtinagar"
     },
     {
@@ -45,18 +46,18 @@ const projects = [
     },
     {
         img: project7,
-        name1: "JNPC",
-        name2: "Lucknow Gomtinagar"
+        name1: "MULTILEVEL PARKING",
+        name2: "Kaiserbagh, Lucknow"
     },
     {
         img: project8,
-        name1: "null",
-        name2: "null"
+        name1: "CCS AIRPORT WORK",
+        name2: "Lucknow"
     },
     {
         img: project9,
-        name1: "JNPC",
-        name2: "Lucknow Gomtinagar"
+        name1: "AQUATIC STADIUM",
+        name2: "Saifai Etawah"
     },
 ];
 
@@ -103,15 +104,12 @@ const Project = () => {
                     <div className="flex items-center justify-between px-3 md:px-8 gap-6 mb-6 md:mb-10">
 
                         {/* LEFT TEXT */}
-                        <div className="w-full md:max-w-6xl mx-auto p-4 md:p-6">
-                            <h2 className="text-lg md:text-sm font-bold text-blue-800">
-                                SHOCASE EXCELLENCE:
-                            </h2>
-
+                        <div className="w-full md:max-w-7xl mx-auto p-4 md:p-5">
+                            
                             <div className="flex justify-between items-center">
                                 <div>
-                                    <h2 className="text-lg md:text-3xl font-semibold text-gray-800">
-                                        Our Delivered Project
+                                    <h2 className="text-lg md:text-5xl tracking-tight font-semibold text-[#004fa6]">
+                                        Our Delivered Projects:
                                     </h2>
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -134,11 +132,10 @@ const Project = () => {
 
                         {/* RIGHT ARROWS (just next to text) */}
 
-
                     </div>
 
                     {/* IMAGES ROW */}
-                    <div className="overflow-hidden md:max-w-6xl mx-auto p-4">
+                    <div className="overflow-hidden md:max-w-7xl mx-auto">
                         <div
                             className="flex transition-transform duration-500"
                             style={{
@@ -155,7 +152,7 @@ const Project = () => {
                                     <img
                                         src={project.img}
                                         alt={project.name1}
-                                        className="w-full h-[320px] object-cover"
+                                        className="w-full h-[420px] object-cover"
                                     />
 
                                     {/* Bottom Image */}
@@ -169,13 +166,13 @@ const Project = () => {
                                         <div
                                             className="absolute inset-0
                                          flex flex-col items-center justify-center
-                                         text-blue-700 font-semibold text-lg
+                                         text-[#004fa6] leading-tight text-lg
                                           bg-transparent
                                           transition-all duration-300
-                                          group-hover:bg-blue-700
+                                          group-hover:bg-[#004fa6]
                                           group-hover:text-white"
                                         >
-                                            <h3>{project?.name1}</h3>
+                                            <h3 className="text-2xl font-bold">{project?.name1}</h3>
                                             <p>{project?.name2}</p>
                                         </div>
                                     </div>

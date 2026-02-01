@@ -216,8 +216,8 @@ const Home = () => {
       <Serve />
       <Project/>
       <OurClient />
-     
-      {/* <ServiceSection /> */}
+     <Testimonial/>
+     {/*  <ServiceSection /> */}
 
 
     </>

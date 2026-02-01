@@ -20,22 +20,28 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-8 font-medium">
-          {["Home", "Project", "About", "Services", "Pages", "Contact"].map(
-            (item) => (
-              <Link
-                key={item}
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="relative hover:text-blue-500
-                after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px]
-                after:bg-blue-500 after:scale-x-0 hover:after:scale-x-100
-                after:transition-transform after:origin-left"
-              >
-                {item}
-              </Link>
-            )
-          )}
-        </div>
+       <div className="hidden md:flex gap-15 font-medium items-center">
+  {["Home", "Services", "Project", "About", "Contact"].map((item) => {
+    const isContact = item === "Contact";
+
+    return (
+      <Link
+        key={item}
+        to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+        className={`relative text-md transition-all duration-300
+          ${
+            isContact
+              ? "px-4 py-1.5 border-2 border-[#004fa6] text-[#004fa6] hover:bg-[#004fa6] hover:text-white"
+              : "hover:text-[#004fa6] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#004fa6] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
+          }
+        `}
+      >
+        {item}
+      </Link>
+    );
+  })}
+</div>
+
 
         {/* Mobile Menu Button */}
         <button

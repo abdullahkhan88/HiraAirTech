@@ -22,29 +22,11 @@ const About = () => {
 
                         {/* Heading */}
                         <h1 className="text-md md:text-xl font-semibold text-white text-center md:text-left">
-                            About Us
+                            ABOUT US
                         </h1>
 
                         {/* Arrows */}
-                        <div className="flex gap-4 justify-center md:justify-start mt-6 md:mt-0">
-                            <button
-                                className="w-8 h-8 md:w-10 md:h-10 
-                                border border-white 
-                                flex items-center justify-center 
-                                text-white hover:bg-white hover:text-[#004FA6] transition"
-                            >
-                                <FaArrowLeft />
-                            </button>
-
-                            <button
-                                className="w-8 h-8 md:w-10 md:h-10 
-                                border border-white 
-                                flex items-center justify-center 
-                                text-white hover:bg-white hover:text-[#004FA6] transition"
-                            >
-                                <FaArrowRight />
-                            </button>
-                        </div>
+                       
                     </div>
                 </div>
 
@@ -73,9 +55,9 @@ const About = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8">
 
                         {[
-                            { value: "10", label: "Years Experience" },
-                            { value: "250", label: "Successful Projects" },
-                            { value: "100", label: "Client Served" }
+                            { value: "15", label: "Years Experience" },
+                            { value: "50", label: "Successful Projects" },
+                            { value: "28", label: "Client Served" }
                         ].map((item, index) => (
                             <div
                                 key={index}
@@ -88,7 +70,7 @@ const About = () => {
                                 />
 
                                 <div className="absolute text-center animate__animated animate__fadeInUp">
-                                    <h4 className="text-2xl md:text-3xl mt-3 font-bold text-[#004FA6]">
+                                    <h4 className="text-3xl md:text-6xl mt-3 font-bold text-[#004FA6]">
 
                                         <CountUp
                                             end={item.value}
@@ -97,7 +79,7 @@ const About = () => {
                                             scrollSpyOnce
                                         />
                                     </h4>
-                                    <p className="text-gray-500 text-xs md:text-sm mt-4">
+                                    <p className="text-[#7d7f85] text-xs md:text-sm">
                                         {item.label}
                                     </p>
                                 </div>
