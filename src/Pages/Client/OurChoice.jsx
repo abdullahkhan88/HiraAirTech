@@ -14,12 +14,30 @@ import bigSlides3 from "../../assets/ourserviceAsset/bottomSlide3.png";
 import bigSlides4 from "../../assets/ourserviceAsset/bottomSlide4.png";
 
 const topSlides = [
-  topslide1,
-  topslide2,
-  topslide3,
-  topslide4,
-  topslide5,
-  topslide6,
+  {
+    img: topslide1,
+    title: "Experienced Team",
+  },
+  {
+    img: topslide2,
+    title: "After-Work Support",
+  },
+  {
+    img: topslide3,
+    title: "Integrated Works",
+  },
+  {
+    img: topslide4,
+    title: "Cost Effective",
+  },
+  {
+    img: topslide5,
+    title: "Quality Focus",
+  },
+  {
+    img: topslide6,
+    title: "Timely Completion",
+  },
 ];
 
 const bigSlides = [
@@ -49,14 +67,16 @@ const OurChoice = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const totalSteps = Math.ceil(topSlides.length / visibleCount);
+  /*  const totalSteps = Math.ceil(topSlides.length / visibleCount); */
+  const maxIndex = topSlides.length - visibleCount;
+
 
   const handlePrev = () => {
-    setTopIndex((prev) => (prev === 0 ? totalSteps - 1 : prev - 1));
+    setTopIndex(prev => (prev > 0 ? prev - 1 : maxIndex));
   };
 
   const handleNext = () => {
-    setTopIndex((prev) => (prev === totalSteps - 1 ? 0 : prev + 1));
+    setTopIndex(prev => (prev < maxIndex ? prev + 1 : 0));
   };
 
   //  BIG SLIDER AUTO
@@ -71,14 +91,14 @@ const OurChoice = () => {
   }, []);
 
   return (
-    <section className="w-full bg-white py-20">
+    <section className="w-full bg-white py-5 md:py-20">
       {/* HEADER */}
-      <div className="flex justify-between items-center max-w-7xl mx-auto  py-10">
-        <h1 className="text-[#004FA6] tracking-tight flex items-center text-2xl md:text-5xl font-bold">
+      <div className="flex justify-between items-center max-w-7xl mx-auto py-5 md:py-10">
+        <h1 className="text-[#004FA6] tracking-tight flex items-center px-6 md:px-0 text-xl md:text-5xl font-bold">
           Why Hira Airtek is trusted?
         </h1>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center px-6 md:px-0  gap-3">
           <button
             onClick={handlePrev}
             className="p-2 text-[#004FA6] border hover:bg-[#004FA6] hover:text-white transition"
@@ -96,28 +116,42 @@ const OurChoice = () => {
 
 
       {/* TOP SLIDER */}
-      <div className="relative overflow-hidden max-w-7xl mx-auto">
+      <div className="relative overflow-hidden max-w-[1320px] mx-auto">
         <div
-          className="flex transition-transform duration-500 gap-6"
-          style={{ transform: `translateX(-${topIndex * 100}%)` }}
+          className="flex transition-transform duration-500"
+          style={{ transform: `translateX(-${topIndex * (100 / visibleCount)}%)` }}
         >
-          {topSlides.map((img, i) => (
+          {topSlides.map((item, i) => (
             <div
               key={i}
               className="flex-shrink-0"
               style={{ width: `${100 / visibleCount}%` }}
             >
-              <div className="relative h-[260px] sm:h-[320px] md:h-[400px] md:w-[400px] overflow-hidden">
+              <div className="relative h-[390px] sm:h-[320px] md:h-[410px] md:w-[440px] overflow-hidden">
+
+                {/* 🔹 IMAGE */}
                 <img
-                  src={img}
+                  src={item.img}
                   alt=""
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full px-4 h-full object-contain"
                 />
+
+                {/* 🔹 TEXT OVER IMAGE */}
+                <div className="absolute bottom-5 left-10 z-100">
+                  <h3 className="text-white text-xl md:text-2xl font-semibold">
+                    {item.title}
+                  </h3>
+
+                </div>
+
+
               </div>
             </div>
           ))}
         </div>
       </div>
+
+
 
       {/* BIG SLIDER */}
       <div className="relative overflow-hidden mt-10 max-w-7xl mx-auto">
@@ -126,7 +160,7 @@ const OurChoice = () => {
           style={{ transform: `translateX(-${bigIndex * 100}%)` }}
         >
           {bigSlides.map((img, i) => (
-            <div key={i} className="w-full flex-shrink-0">
+            <div key={i} className="w-full flex-shrink-0 px-4 md:px-2">
               <div className="h-[300px] sm:h-[400px] md:h-[600px] overflow-hidden">
                 <img
                   src={img}
@@ -142,7 +176,7 @@ const OurChoice = () => {
       {/* BOTTOM CONTENT */}
       <div className="mt-8 flex flex-col md:flex-row
        items-center justify-between max-w-7xl mx-auto">
-        <p className="text-gray-700  text-md md:text-3xl max-w-3xl py-5">
+        <p className="text-gray-700 px-6 md:px-0  text-md md:text-3xl max-w-3xl py-2 md:py-5">
           Our role is to simplify execution for our clients by handling
           our scope responsibly and working seamlessly with other
           teams on site.

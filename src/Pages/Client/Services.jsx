@@ -31,16 +31,16 @@ const Services = () => {
       {/* hero section */}
       <section className="relative bg-gray-200 min-h-[320px] md:min-h-[350px] flex items-center px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2  py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 py-10 md:py-28 px-2 md:px-0">
 
             {/* LEFT */}
-            <div className="text-center md:text-left w-md">
-              <p className="text-[#004FA6] uppercase text-xl font-semibold mb-3">
+            <div className="text-center lg:text-left  lg:w-md">
+              <p className="text-[#004FA6] uppercase text-md md:text-xl font-semibold mb-3">
                 Our Services
               </p>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold
-               text-gray-900 leading-thin space-y-4">
+              <h2 className="text-xl md:text-2xl lg:text-4xl font-bold
+               text-gray-900 leading-thin mb-3 md:space-y-4">
                 Core technical works
                 delivered with precision
                 and accountability
@@ -48,8 +48,8 @@ const Services = () => {
             </div>
 
             {/* RIGHT */}
-            <div className="">
-              <p className="text-gray-700 mb-6 leading-tight text-base sm:text-2xl">
+            <div >
+              <p className="text-gray-700 mb-6 leading-tight text-center lg:text-left text-base sm:text-2xl">
                 We deliver HVAC systems, fire fighting services, and
                 false ceiling works for commercial and industrial
                 projects. Each service is handled by experienced teams
@@ -58,10 +58,18 @@ const Services = () => {
                 reliably after handover.
               </p>
 
-              <button onClick={handleBookService} className="bg-[#004FA6] text-white px-2 md:px-8  py-1 md:py-2
-               cursor-pointer text-2xl hover:bg-blue-700 transition">
-                View Services
-              </button>
+              <div className="text-center lg:text-left">
+                <button
+                  onClick={handleBookService}
+                  className="bg-[#004FA6] text-white 
+             w-1/2 sm:w-auto
+             px-4 md:px-8 py-2 md:py-2
+             cursor-pointer text-md md:text-2xl 
+             hover:bg-blue-700 transition"
+                >
+                  View Services
+                </button>
+              </div>
             </div>
 
           </div>
@@ -69,7 +77,7 @@ const Services = () => {
       </section>
 
       {/* SLIDER SECTION */}
-      <section className="bg-gray-200 pb-10 relative">
+      <section className="bg-gray-200 pb-10 md:pb-20 relative">
         <div className="overflow-hidden mx-auto w-[90%] md:w-[90%] h-[200px] sm:h-[380px] md:h-[650px]">
 
           <div
@@ -88,7 +96,7 @@ const Services = () => {
           </div>
 
           {/* INDICATOR */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 px-4 w-full justify-center">
+          <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 px-4 w-full justify-center">
             {slides.map((_, index) => (
               <div
                 key={index}

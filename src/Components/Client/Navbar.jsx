@@ -6,7 +6,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-white text-blue-700 px-4 md:px-20 py-4 shadow-md relative z-50">
+    <nav className="bg-white text-[#004fa6] px-4 md:px-20 py-4 relative z-50">
       {/* Top Bar */}
       <div className="flex items-center justify-between">
 
@@ -20,7 +20,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-       <div className="hidden md:flex gap-15 font-medium items-center">
+       <div className="hidden md:flex gap-4 md:gap-8 lg:gap-15 font-medium items-center">
   {["Home", "Services", "Project", "About", "Contact"].map((item) => {
     const isContact = item === "Contact";
 

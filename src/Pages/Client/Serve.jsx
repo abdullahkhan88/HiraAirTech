@@ -23,7 +23,7 @@ const Serve = () => {
   }
 
   return (
-    <section className="w-full bg-[#004FA6] min-h-[90vh] py-16 flex items-center">
+    <section className="w-full bg-[#004FA6] md:min-h-[90vh] py-8 md:py-16 flex items-center">
       <div className="max-w-[1400px] mx-auto w-full">
 
         {/* TOP CONTENT */}
@@ -31,13 +31,13 @@ const Serve = () => {
           <h2 className="text-white text-2xl md:text-5xl font-bold mb-4">
             Industries we’ve worked across
           </h2>
-          <p className="text-blue-100 font-leading max-w-4xl mx-auto text-md md:text-2xl">
+          <p className="text-blue-100 font-leading max-w-4xl px-6 md:px-0 mx-auto text-md md:text-2xl">
             Over the years, Hira Airtek has executed works across diverse industry environments from
             building owners and contractors to architects and manufacturers. Explore the industries we’ve
             served to see where our experience comes from.
           </p>
           <button onClick={handleServe} className="bg-white text-[#004FA6] px-14 py-4 mt-6 font-medium
-              hover:bg-[#004FA6] hover:outline hover:outline-2 hover:outline-white md:text-2xl
+              hover:bg-[#004FA6] hover:outline hover:outline-2 hover:outline-white text-2xl
                 cursor-pointer hover:text-white transition duration-300">
             Take a Tour
           </button>
@@ -52,7 +52,7 @@ const Serve = () => {
             style={{ transform: `translateX(-${index * 100}%)` }}
           >
             {slides.map((img, i) => (
-              <div key={i} className="w-full h-full flex-shrink-0 mt-12">
+              <div key={i} className="w-full h-full flex-shrink-0 mt-12 px-6">
                 <img
                   src={img}
                   alt="service"

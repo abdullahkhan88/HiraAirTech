@@ -145,7 +145,7 @@ const Project = () => {
                             {projects.map((project, i) => (
                                 <div
                                     key={i}
-                                    className="flex-shrink-0 px-4"
+                                    className="flex-shrink-0 px-6"
                                     style={{ width: `${100 / visibleSlides}%` }}
                                 >
                                     {/* Project Image */}

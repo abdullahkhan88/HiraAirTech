@@ -59,7 +59,7 @@ const slides = [
 
 const Home = () => {
   const [current, setCurrent] = useState(0);
-  const isanimation = true;
+  const isanimation = false;
   useEffect(() => {
     if (!isanimation) return
     const interval = setInterval(() => {
@@ -90,13 +90,13 @@ const Home = () => {
                     />
 
                     <div className="absolute
-                     top-6 left-4 sm:top-10 sm:left-10 md:top-24 md:left-22 text-white max-w-xl md:max-w-4xl">
+                     top-6 left-4 sm:top-10 sm:left-10 md:top-24 md:left-11 lg:left-22 text-white max-w-xl md:max-w-4xl">
                       {slide.text.map((line, i) => (
                         <p
                           key={i}
                           className={`font-semibold ${index === 1
-                            ? "text-lg sm:text-xl md:text-4xl"
-                            : "text-base sm:text-xl md:text-5xl"
+                            ? "text-lg sm:text-xl md:text-3xl lg:text-5xl"
+                            : "text-base sm:text-xl md:text-3xl lg:text-5xl"
                             }`}
                         >
                           {line}
@@ -109,7 +109,7 @@ const Home = () => {
                           {slide.para.map((p, i) => (
                             <p
                               key={i}
-                              className="text-[11px] leading-tight  sm:text-sm md:text-md font-normal"
+                              className="text-[11px] leading-tight  sm:text-sm md:text-xl font-normal"
                             >
                               {p}
                             </p>
@@ -117,8 +117,8 @@ const Home = () => {
                         </div>
                       )}
 
-                      <button className="mt-4 sm:mt-6 px-2 sm:px-3 py-1 sm:py-3
-                       text-base sm:text-md bg-[#004FA6] hover:bg-blue-800 text-white cursor-pointer">
+                      <button className="mt-4 sm:mt-6 px-2 sm:px-5 py-1 sm:py-3
+                       text-base sm:text-lg bg-[#004FA6] hover:bg-blue-800 text-white cursor-pointer">
                         Explore Our Solution
                       </button>
                     </div>
@@ -195,7 +195,7 @@ const Home = () => {
           </div>
 
           {/* ================= INDICATORS ================= */}
-          <div className="absolute  bottom-5 md:bottom-15 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+          <div className="absolute  bottom-2 md:bottom-7 lg:bottom-15 left-1/2 -translate-x-1/2 flex gap-2 z-20">
             {slides.map((_, index) => (
               <div
                 key={index}

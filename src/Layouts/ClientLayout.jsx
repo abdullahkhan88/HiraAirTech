@@ -1,6 +1,6 @@
 import { Outlet, } from "react-router-dom";
 import Navbar from "../Components/Client/Navbar.jsx";
-import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 
 const ClientLayout = () => {
   return (
@@ -17,12 +17,12 @@ const ClientLayout = () => {
       {/* Footer */}
 
       <footer className="bg-[#004FA6] text-white py-10 md:py-16">
-        <hr className="hidden md:block"/>
+        <hr className="hidden md:block text-[#71b6e4]" />
         {/* TOP FOOTER */}
         <div className="max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* QUICK LINKS */}
-          <div className="md:py-6 px-8 md:border-l-1">
-            <h3 className="font-bold text-md mb-4">Quick Links</h3>
+          <div className="md:py-6 px-8 md:border-l-1 border-[#71b6e4]">
+            <h3 className="font-bold text-md mb-4">QUICK LINKS</h3>
             <ul className="space-y-2 text-md md:text-sm opacity-90">
               <li className="hover:underline cursor-pointer">About Us</li>
               <li className="hover:underline cursor-pointer">Services</li>
@@ -33,8 +33,8 @@ const ClientLayout = () => {
           </div>
 
           {/* CONTACT US */}
-          <div className="md:border-r-1 md:py-6 px-8">
-            <h3 className="font-bold text-md mb-4">Contact Us</h3>
+          <div className="md:border-r-1 border-[#71b6e4] md:py-6 px-8">
+            <h3 className="font-bold text-md mb-4">CONTACT US</h3>
             <ul className="space-y-2 text-xs opacity-90">
               <li> +9188582 60701, +9177539 15836,
                 +9173797 43372
@@ -46,24 +46,24 @@ const ClientLayout = () => {
 
           {/* HEAD OFFICE */}
           <div className="py-6 px-8">
-            <h3 className="font-bold text-md mb-4">Head Office</h3>
-            <p className="text-sm leading-relaxed opacity-90">
-              P-2, Sapna City Colony,
+            <h3 className="font-bold text-md">HEAD OFFICE</h3>
+            <p className="text-sm leading-tight mt-2 opacity-90">
+              P-2, Sapna City Colony,<br/>
               New Gomti Nagar, Lucknow-226028
             </p>
 
             <div className="mt-6">
-              <h3 className="font-bold text-md mb-2">OUR BRANCH OFFICE</h3>
-              <p className="text-sm leading-relaxed opacity-90">
-                Matiyari Chinhat Chauraha,
+              <h3 className="font-bold text-md">OUR BRANCH OFFICE</h3>
+              <p className="text-sm leading-tight mt-2 opacity-90">
+                Matiyari Chinhat Chauraha,<br/>
                 New Gomti Nagar, Lucknow-226028
               </p>
             </div>
 
           </div>
 
-          <div className="py-2 md:py-6 px-8 border-r">
-            <h2 className="text-2xl font-bold mb-4">HiraAirtech</h2>
+          <div className="py-2 md:py-6 px-8 border-r border-[#71b6e4]">
+            <h2 className="text-2xl font-bold mb-4">HiraAirtek</h2>
             <p className="text-sm leading-relaxed opacity-90">
               Your trusted partner for
               complete building solutions.
@@ -75,22 +75,22 @@ const ClientLayout = () => {
         </div>
 
         {/* BOTTOM FOOTER */}
-        <div className="border-1 border-r-0 border-l-0 border-white">
-          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row border-l-1
+        <div className="border-1 border-r-0 border-l-0 border-[#71b6e4]">
+          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row border-[#71b6e4] border-l-1
            border-r-1 items-center justify-between gap-4">
-
-            {/* COPYRIGHT */}
+           
+             {/* SOCIAL */}
+            <div className="flex items-center gap-4">
+              <span className="text-sm font-semibold">FOLLOW US</span>
+              <FaFacebookF className="text-xl cursor-pointer hover:text-blue-300 transition" />
+              <FaInstagram className="text-xl cursor-pointer hover:text-pink-400 transition" />
+              <FaWhatsapp className="text-xl cursor-pointer hover:text-green-300 transition" />
+            </div>
+           
+             {/* COPYRIGHT */}
             <p className="text-sm opacity-80">
               © {new Date().getFullYear()} HiraAirtech. All rights reserved.
             </p>
-
-            {/* SOCIAL */}
-            <div className="flex items-center gap-4">
-              <span className="text-sm font-semibold">Follow Us</span>
-              <FaInstagram className="text-xl cursor-pointer hover:text-pink-400 transition" />
-              <FaFacebookF className="text-xl cursor-pointer hover:text-blue-300 transition" />
-            </div>
-
           </div>
         </div>
 
