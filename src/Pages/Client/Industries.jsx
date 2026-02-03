@@ -51,7 +51,7 @@ const Industries = () => {
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row">
 
         {/* LEFT LABEL */}
-        <div className="md:max-w-md flex justify-center py-15 md:justify-start">
+        <div className="md:max-w-md flex justify-center py-5 md:py-8 lg:py-15 md:justify-start">
           <p className="text-[#004FA6] text-xl font-bold uppercase">
             INDUSTRIES WE SERVE
           </p>
@@ -61,7 +61,7 @@ const Industries = () => {
         <div className="md:ml-auto max-w-4xl pb-25 ">
 
           {/* Heading */}
-          <div className="max-w-xl py-4 mx-auto">
+          <div className="max-w-xl md:py-4 mx-auto">
             <h2 className="text-3xl md:text-5xl py-6 font-bold  text-gray-900 mt-2">
               Experience across <br className="hidden md:block" />
               multiple industry sectors

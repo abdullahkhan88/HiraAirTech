@@ -58,7 +58,7 @@ const slides = [
 ];
 
 const Home = () => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(2);
   const isanimation = false;
   useEffect(() => {
     if (!isanimation) return
@@ -90,13 +90,14 @@ const Home = () => {
                     />
 
                     <div className="absolute
-                     top-6 left-4 sm:top-10 sm:left-10 md:top-24 md:left-11 lg:left-22 text-white max-w-xl md:max-w-4xl">
+                     top-6 left-4 sm:top-10 sm:left-10 md:top-24 md:left-10 lg:left-20 
+                      text-white max-w-xl md:max-w-4xl">
                       {slide.text.map((line, i) => (
                         <p
                           key={i}
                           className={`font-semibold ${index === 1
-                            ? "text-lg sm:text-xl md:text-3xl lg:text-5xl"
-                            : "text-base sm:text-xl md:text-3xl lg:text-5xl"
+                            ? "text-lg sm:text-xl md:text-3xl lg:text-6xl tracking-tight"
+                            : "text-base sm:text-xl md:text-3xl lg:text-6xl tracking-tight"
                             }`}
                         >
                           {line}
@@ -109,7 +110,7 @@ const Home = () => {
                           {slide.para.map((p, i) => (
                             <p
                               key={i}
-                              className="text-[11px] leading-tight  sm:text-sm md:text-xl font-normal"
+                              className="text-[11px] leading-tight sm:text-sm md:text-xl lg:text-2xl font-normal"
                             >
                               {p}
                             </p>
@@ -117,8 +118,8 @@ const Home = () => {
                         </div>
                       )}
 
-                      <button className="mt-4 sm:mt-6 px-2 sm:px-5 py-1 sm:py-3
-                       text-base sm:text-lg bg-[#004FA6] hover:bg-blue-800 text-white cursor-pointer">
+                      <button className="mt-4 sm:mt-6 md:mt-12 px-2 sm:px-6 md:px-9 lg:px-12 py-1 sm:py-3
+                       text-base sm:text-lg lg:text-xl bg-[#004FA6] hover:bg-blue-800 text-white cursor-pointer">
                         Explore Our Solution
                       </button>
                     </div>
@@ -146,7 +147,7 @@ const Home = () => {
                         ))}
 
                         <button className="mt-4 w-fit px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700">
-                          Explore our solutions
+                          Explore our solution
                         </button>
                       </div>
                     </div>
@@ -166,21 +167,21 @@ const Home = () => {
                           className="absolute
                           top-6 left-4
                            sm:top-10 sm:left-10
-                           md:top-24 md:left-22
+                           md:top-25 lg:top-30 md:left-22 lg:left-30
                             text-white max-w-xl"
                         >
                           {slide.text.map((line, i) => (
                             <p
                               key={i}
-                              className="text-lg sm:text-2xl text-[#004FA6] md:text-[2.5rem] font-semibold leading-tight"
+                              className="text-lg sm:text-2xl text-[#004FA6] md:text-[2.5rem] lg:text-6xl font-semibold leading-tight"
                             >
                               {line}
                             </p>
                           ))}
 
                           <button
-                            className="mt-8 md:px-3 md:py-3 bg-[#004FA6]
-                             hover:bg-blue-700 text-white text-base sm:text-md"
+                            className="mt-8 md:px-4 lg:px-8 md:py-3 bg-[#004FA6]
+                             hover:bg-blue-700 text-white text-base sm:text-md md:text-lg lg:text-xl"
                           >
                             Explore our solution
                           </button>
