@@ -174,7 +174,7 @@ const OurChoice = () => {
       </div>
 
       {/* BOTTOM CONTENT */}
-      <div className="mt-8 flex flex-col md:flex-row
+      <div className="mt-8 flex flex-col lg:flex-row
        items-center justify-between max-w-7xl mx-auto">
         <p className="text-gray-700 px-6 md:px-0  text-md md:text-3xl max-w-3xl py-2 md:py-5">
           Our role is to simplify execution for our clients by handling

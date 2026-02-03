@@ -23,7 +23,7 @@ const Services = () => {
 
 
   const handleBookService = () => {
-    navigate('service-section');
+    navigate('/service-section');
   }
 
   return (
@@ -61,11 +61,11 @@ const Services = () => {
               <div className="text-center lg:text-left">
                 <button
                   onClick={handleBookService}
-                  className="bg-[#004FA6] text-white 
+                  className="border-[#004FA6] border-2 text-[#004FA6]
              w-1/2 sm:w-auto
              px-4 md:px-8 py-2 md:py-2
              cursor-pointer text-md md:text-2xl 
-             hover:bg-blue-700 transition"
+             hover:bg-[#004FA6] hover:text-white transition"
                 >
                   View Services
                 </button>

@@ -59,7 +59,7 @@ const slides = [
 
 const Home = () => {
   const [current, setCurrent] = useState(0);
-  const isanimation = true; // stop animation for debuging
+  const isanimation = false; // stop animation for debuging
   useEffect(() => {
     if (!isanimation) return // debug animation
     const interval = setInterval(() => {
@@ -96,8 +96,8 @@ const Home = () => {
                         <p
                           key={i}
                           className={`font-semibold ${index === 1
-                            ? "text-lg sm:text-xl md:text-3xl lg:text-6xl tracking-tight"
-                            : "text-base sm:text-xl md:text-3xl lg:text-6xl tracking-tight"
+                            ? "text-lg sm:text-xl md:text-4xl lg:text-6xl tracking-tight"
+                            : "text-base sm:text-xl md:text-4xl lg:text-6xl tracking-tight"
                             }`}
                         >
                           {line}
