@@ -58,10 +58,10 @@ const slides = [
 ];
 
 const Home = () => {
-  const [current, setCurrent] = useState(2);
-  const isanimation = false;
+  const [current, setCurrent] = useState(0);
+  const isanimation = true; // stop animation for debuging
   useEffect(() => {
-    if (!isanimation) return
+    if (!isanimation) return // debug animation
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 3500);
