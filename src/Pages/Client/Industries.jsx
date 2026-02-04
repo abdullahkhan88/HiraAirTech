@@ -47,12 +47,12 @@ const Industries = () => {
   ];
 
   return (
-    <section className="bg-gray-100">
+    <section className="bg-gray-200 border-t">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row">
 
         {/* LEFT LABEL */}
-        <div className="md:max-w-md flex justify-center py-5 md:py-8 lg:py-15 md:justify-start">
-          <p className="text-[#004FA6] text-xl font-bold uppercase">
+        <div className="md:max-w-md flex  py-5 md:py-8 lg:py-15 md:justify-start">
+          <p className="text-[#004FA6] text-lg font-bold uppercase">
             INDUSTRIES WE SERVE
           </p>
         </div>
@@ -62,12 +62,12 @@ const Industries = () => {
 
           {/* Heading */}
           <div className="max-w-xl md:py-4 mx-auto">
-            <h2 className="text-3xl md:text-5xl py-6 font-bold  text-gray-900 mt-2">
-              Experience across <br className="hidden md:block" />
+            <h2 className="text-2xl md:text-5xl py-2 md:py-6 font-bold leading-tight text-gray-900 md:mt-2">
+              Experience across 
               multiple industry sectors
             </h2>
 
-            <p className="text-gray-800 leading-tight text-xl pb-10 max-w-2xl mx-auto">
+            <p className="text-gray-900 pt-4 md:pt-0 leading-tight text-md md:text-2xl pb-10 max-w-2xl mx-auto">
               Hira Airtek works across environments where HVAC,
               fire safety, and ceiling systems are critical to daily
               operations. Our role remains focused on disciplined
@@ -77,7 +77,7 @@ const Industries = () => {
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 place-items-center md:place-items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-20 place-items-center md:place-items-start">
             {data.map((item, index) => (
               <div key={index} className="max-w-sm">
                 <img

@@ -7,7 +7,7 @@ const About = () => {
         <section
             className="w-full bg-[#004FA6] 
             min-h-[600px] md:min-h-[80vh]
-            py-5 md:py-10 lg:py-25 px-4 flex items-center"
+            py-10 md:py-12 lg:py-25 px-4 flex items-center"
         >
             <div
                 className="max-w-[1400px] w-full mx-auto
@@ -20,8 +20,8 @@ const About = () => {
                 <div className="flex justify-center lg:justify-start">
                     <div className="flex flex-col w-full lg:max-w-md md:py-0 lg:py-10">
 
-                        <h1 className="text-sm sm:text-base md:text-lg md:px-10 font-semibold text-white
-                                 text-center lg:text-left">
+                        <h1 className="text-md sm:text-base md:text-lg px-0 md:px-10 font-semibold text-white
+                                 lg:text-left">
                             ABOUT US
                         </h1>
 
@@ -29,28 +29,28 @@ const About = () => {
                 </div>
 
                 {/* RIGHT SIDE */}
-                <div className="w-full py-0 md:py-6 lg:py-12">
+                <div className="w-full py-0  md:py-6 lg:py-12">
 
-                    <p className="text-white text-sm md:text-lg leading-relaxed mb-4 text-center md:text-left">
+                    <p className="text-white text-md md:text-lg leading-tight md:leading-relaxed mb-4 md:text-left">
                         Hira Airtek began its journey in 2011 as Rasool Engineers, with a clear
                         focus on HVAC execution. Based in Lucknow, we have grown steadily
                         through disciplined execution and responsible project delivery.
                     </p>
 
-                    <p className="text-white text-sm md:text-lg leading-relaxed mb-4 text-center md:text-left">
+                    <p className="text-white text-md md:text-lg leading-tight md:leading-relaxed mb-4  md:text-left">
                         Today, operating as Hira Airtek, we provide HVAC systems, fire fighting
                         services, and false ceiling works, offering clients a single, coordinated
                         partner for essential building services.
                     </p>
 
-                    <p className="text-white text-sm md:text-lg leading-relaxed mb-8 text-center md:text-left">
+                    <p className="text-white text-md md:text-lg leading-tight md:leading-relaxed mb-8 md:text-left">
                         Backed by a team of skilled professionals and years of hands-on
                         industry experience, we remain committed to reliability, quality
                         workmanship, and long-term client satisfaction.
                     </p>
 
                     {/* STATS */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-8">
+                    <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-8">
                         {[
                             { value: "15", label: "Years Experience" },
                             { value: "50", label: "Successful Projects" },
@@ -59,7 +59,7 @@ const About = () => {
                             <div
                                 key={index}
                                 className="relative flex items-center justify-center
-                                    h-32 sm:h-36 md:h-40 lg:h-44"
+                                    sm:h-36 md:h-40 lg:h-44"
                             >
                                 <img
                                     src={symbolimage}

@@ -110,7 +110,7 @@ const Home = () => {
                           {slide.para.map((p, i) => (
                             <p
                               key={i}
-                              className="text-[11px] leading-tight sm:text-sm md:text-xl lg:text-2xl font-normal"
+                              className="text-[11px] hidden md:block leading-tight sm:text-sm md:text-xl lg:text-2xl font-normal"
                             >
                               {p}
                             </p>
@@ -168,12 +168,12 @@ const Home = () => {
                           top-6 left-4
                            sm:top-10 sm:left-10
                            md:top-25 lg:top-30 md:left-22 lg:left-30
-                            text-white max-w-xl"
+                          text-white max-w-xl"
                         >
                           {slide.text.map((line, i) => (
                             <p
                               key={i}
-                              className="text-lg sm:text-2xl text-[#004FA6] md:text-[2.5rem] lg:text-6xl font-semibold leading-tight"
+                              className="text-lg  sm:text-2xl text-[#004FA6] md:text-[2.5rem] lg:text-6xl font-semibold leading-tight"
                             >
                               {line}
                             </p>
@@ -196,7 +196,7 @@ const Home = () => {
           </div>
 
           {/* ================= INDICATORS ================= */}
-          <div className="absolute  bottom-2 md:bottom-7 lg:bottom-15 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+          <div className="absolute  bottom-4 md:bottom-7 lg:bottom-15 left-1/2 -translate-x-1/2 flex gap-2 z-20">
             {slides.map((_, index) => (
               <div
                 key={index}

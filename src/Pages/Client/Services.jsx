@@ -4,6 +4,9 @@ import serviceSection from './ServiceSection.jsx'
 import slide1 from "../../assets/services/Asset-04.png";
 import slide2 from "../../assets/services/Asset-05.png";
 import slide3 from "../../assets/services/Asset-06.png";
+import mobileslide1 from "../../assets/services/mobileAsset4.png";
+import mobileslide2 from "../../assets/services/mobileAsset5.png";
+import mobileslide3 from "../../assets/services/mobileAsset6.png";
 
 
 const slides = [slide1, slide2, slide3];
@@ -39,7 +42,7 @@ const Services = () => {
                 Our Services
               </p>
 
-              <h2 className="text-xl md:text-2xl lg:text-4xl font-bold
+              <h2 className="text-3xl md:text-2xl lg:text-4xl font-bold
                text-gray-900 leading-thin mb-3 md:space-y-4">
                 Core technical works
                 delivered with precision
@@ -49,7 +52,7 @@ const Services = () => {
 
             {/* RIGHT */}
             <div >
-              <p className="text-gray-700 mb-6 leading-tight text-center lg:text-left text-base sm:text-2xl">
+              <p className="text-gray-900 mb-6 leading-tight text-center lg:text-left text-md sm:text-2xl">
                 We deliver HVAC systems, fire fighting services, and
                 false ceiling works for commercial and industrial
                 projects. Each service is handled by experienced teams
@@ -84,6 +87,15 @@ const Services = () => {
             className="flex h-full transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
+            {slides.map((img, index) => (
+              <div key={index} className="min-w-full h-full">
+                <img
+                  src={img}
+                  alt={`slide-${index}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
             {slides.map((img, index) => (
               <div key={index} className="min-w-full h-full">
                 <img
