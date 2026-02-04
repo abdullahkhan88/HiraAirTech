@@ -35,9 +35,10 @@ const ClientLayout = () => {
           {/* CONTACT US */}
           <div className="md:border-r-1 border-[#71b6e4] md:py-6 px-8">
             <h3 className="font-bold text-lg mb-4">CONTACT US</h3>
-            <ul className="space-y-2 text-sm md:text-md opacity-90">
-              <li> +9188582 60701, +9177539 15836,
-                +9173797 43372
+            <ul className="space-y-2 text-sm md:text-md">
+              <li> +918858260701,
+                   +917753915836,
+                   +917379743372
               </li>
               <li> info@hiraairtech.com</li>
 

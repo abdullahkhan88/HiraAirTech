@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import EnquiryForm from "./EnquiryForm.jsx";
 
 import topslide1 from "../../assets/ourserviceAsset/services6.png";
 import topslide2 from "../../assets/ourserviceAsset/services1.png";
@@ -12,6 +14,11 @@ import bigSlides1 from "../../assets/ourserviceAsset/bottomSlide1.png";
 import bigSlides2 from "../../assets/ourserviceAsset/bottomSlide2.png";
 import bigSlides3 from "../../assets/ourserviceAsset/bottomSlide3.png";
 import bigSlides4 from "../../assets/ourserviceAsset/bottomSlide4.png";
+/* mobile image */
+import bigSlidesMobile1 from "../../assets/ourserviceAsset/Asset1.png";
+import bigSlidesMobile2 from "../../assets/ourserviceAsset/Asset2.png";
+import bigSlidesMobile3 from "../../assets/ourserviceAsset/Asset3.png";
+import bigSlidesMobile4 from "../../assets/ourserviceAsset/Asset4.png";
 
 const topSlides = [
   {
@@ -46,11 +53,24 @@ const bigSlides = [
   bigSlides3,
   bigSlides4,
 ];
+const bigSlidesMobile = [
+  bigSlidesMobile1,
+  bigSlidesMobile2,
+  bigSlidesMobile3,
+  bigSlidesMobile4,
+];
 
 const OurChoice = () => {
+
+
   const [topIndex, setTopIndex] = useState(0);
   const [bigIndex, setBigIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
+
+  const navigate = useNavigate();
+  const handleEnquiryForm = () => {
+    navigate('/enquiryform')
+  }
 
   //  RESPONSIVE COUNT
   useEffect(() => {
@@ -94,7 +114,7 @@ const OurChoice = () => {
     <section className="w-full bg-white py-5 md:py-20">
       {/* HEADER */}
       <div className="flex justify-between items-center max-w-7xl mx-auto py-5 md:py-10">
-        <h1 className="text-[#004FA6] tracking-tight flex items-center px-6 md:px-0 text-xl md:text-5xl font-bold">
+        <h1 className="text-[#004FA6] tracking-tight flex items-center px-4 md:px-0 text-xl md:text-5xl font-bold">
           Why Hira Airtek is trusted?
         </h1>
 
@@ -137,7 +157,7 @@ const OurChoice = () => {
                 />
 
                 {/* 🔹 TEXT OVER IMAGE */}
-                <div className="absolute bottom-5 left-10 z-100">
+                <div className="absolute bottom-10 left-10 z-100">
                   <h3 className="text-white text-xl md:text-2xl font-semibold">
                     {item.title}
                   </h3>
@@ -159,30 +179,49 @@ const OurChoice = () => {
           className="flex transition-transform duration-700"
           style={{ transform: `translateX(-${bigIndex * 100}%)` }}
         >
-          {bigSlides.map((img, i) => (
-            <div key={i} className="w-full flex-shrink-0 px-4 md:px-2">
-              <div className="h-[300px] sm:h-[400px] md:h-[600px] overflow-hidden">
-                <img
-                  src={img}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
+          {/* Desktop / Tablet Slides */}
+          <div className="hidden md:flex">
+            {bigSlides.map((img, i) => (
+              <div key={i} className="w-full flex-shrink-0 px-4 md:px-2">
+                <div className="h-[600px] overflow-hidden">
+                  <img
+                    src={img}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Mobile Slides */}
+          <div className="flex md:hidden">
+            {bigSlidesMobile.map((img, i) => (
+              <div key={i} className="w-full flex-shrink-0 px-4">
+                <div className="h-[300px] overflow-hidden">
+                  <img
+                    src={img}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
 
       {/* BOTTOM CONTENT */}
       <div className="mt-8 flex flex-col lg:flex-row
        items-center justify-between max-w-7xl mx-auto">
-        <p className="text-gray-700 px-6 md:px-0  text-md md:text-3xl max-w-3xl py-2 md:py-5">
+        <p className="text-gray-700 text-center md:text-left px-4 tracking-tight md:px-0 text-md md:text-3xl max-w-3xl py-2 md:py-5">
           Our role is to simplify execution for our clients by handling
           our scope responsibly and working seamlessly with other
           teams on site.
         </p>
 
-        <button className="px-17 py-1.5 bg-[#004FA6] text-white md:text-2xl cursor-pointer transition">
+        <button onClick={handleEnquiryForm} className="px-17 py-1.5 bg-[#004FA6] text-white md:text-2xl cursor-pointer transition">
           Send Enquiry
         </button>
       </div>

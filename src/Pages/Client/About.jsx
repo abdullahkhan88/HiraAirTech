@@ -68,7 +68,7 @@ const About = () => {
                                 />
 
                                 <div className="absolute text-center animate__animated animate__fadeInUp">
-                                    <h4 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-[#004FA6] ${index == 1 ? "pt-4": ""}`}>
+                                    <h4 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-[#004FA6] ${index == 0 || index==1 ? "pt-2": ""}`}>
                                         <CountUp
                                             end={item.value}
                                             duration={2}

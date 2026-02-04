@@ -42,7 +42,7 @@ const Services = () => {
                 Our Services
               </p>
 
-              <h2 className="text-3xl md:text-2xl lg:text-4xl font-bold
+              <h2 className="text-2xl md:text-2xl lg:text-4xl font-bold
                text-gray-900 leading-tight mb-4 md:space-y-4">
                 Core technical works
                 delivered with precision

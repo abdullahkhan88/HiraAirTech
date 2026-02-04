@@ -1,10 +1,20 @@
 import card1 from "../../assets/Testimonial/Asset-36.png";
 import reachImg from "../../assets/Testimonial/Asset-33.png";
-import reachImgMobile from "../../assets/Testimonial/Asset-20.png"; 
+import reachImgMobile from "../../assets/Testimonial/LastBanner.jpg"; 
+import EnquiryForm from "../../Pages/Client/EnquiryForm.jsx";
+import { useNavigate } from "react-router-dom";
 
 
 
 const Testimonials = () => {
+
+    const navigate = useNavigate();
+
+    const handleQuations = () =>{
+        navigate('/enquiryform')
+    }
+
+
     return (
         <>
 
@@ -24,8 +34,8 @@ const Testimonials = () => {
                 />
 
                 {/* OVERLAY */}
-                <div className=" absolute
-                        left-4 top-5
+                <div className="absolute
+                        left-7 top-40
                         sm:left-8 sm:top-10
                         md:left-20 md:top-20
                         lg:left-30 lg:top-28">
@@ -43,7 +53,8 @@ const Testimonials = () => {
                         </p>
 
                         {/* BUTTON */}
-                        <button className=" hidden md:block bg-[#004FA6] text-xs md:text-md lg:text-xl text-white mt-8 px-2 md:px-6 py-3 md:py-3 cursor-pointer
+                        <button onClick={handleQuations} className="bg-[#004FA6] text-xs md:text-md lg:text-xl 
+                        text-white mt-8 px-1.5 md:px-6 py-1.5 md:py-3 cursor-pointer
                         ">
                             Request a Quotation
                         </button>

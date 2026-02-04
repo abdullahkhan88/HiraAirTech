@@ -104,11 +104,11 @@ const Project = () => {
                     <div className="flex items-center justify-between px-3 md:px-8 gap-6 mb-6 md:mb-10">
 
                         {/* LEFT TEXT */}
-                        <div className="w-full md:max-w-7xl mx-auto p-4 md:p-5">
+                        <div className="w-full md:max-w-7xl mx-auto  md:p-5">
                             
                             <div className="flex justify-between items-center">
                                 <div>
-                                    <h2 className="text-lg md:text-5xl tracking-tight font-semibold text-[#004fa6]">
+                                    <h2 className="text-lg md:text-5xl px-2 tracking-tight font-semibold text-[#004fa6]">
                                         Our Delivered Projects:
                                     </h2>
                                 </div>
@@ -145,7 +145,7 @@ const Project = () => {
                             {projects.map((project, i) => (
                                 <div
                                     key={i}
-                                    className="flex-shrink-0 px-6"
+                                    className="flex-shrink-0 px-4 md:px-6"
                                     style={{ width: `${100 / visibleSlides}%` }}
                                 >
                                     {/* Project Image */}

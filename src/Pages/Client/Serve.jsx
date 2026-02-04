@@ -27,8 +27,8 @@ const Serve = () => {
       <div className="max-w-[1400px] mx-auto w-full">
 
         {/* TOP CONTENT */}
-        <div className="text-center max-w-full mx-auto mt-6">
-          <h2 className="text-white text-2xl md:text-5xl font-bold mb-4">
+        <div className="text-center max-w-full mx-auto mt-2 md:mt-6">
+          <h2 className="text-white text-2xl px-4 md:px-2 md:text-5xl font-bold mb-4">
             Industries we’ve worked across
           </h2>
           <p className="text-blue-100 font-leading max-w-4xl px-6 md:px-0 mx-auto text-md md:text-2xl">
@@ -36,8 +36,8 @@ const Serve = () => {
             building owners and contractors to architects and manufacturers. Explore the industries we’ve
             served to see where our experience comes from.
           </p>
-          <button onClick={handleServe} className="bg-white text-[#004FA6] px-14 py-4 mt-6 font-medium
-              hover:bg-[#004FA6] hover:outline hover:outline-2 hover:outline-white text-2xl
+          <button onClick={handleServe} className="bg-white text-[#004FA6] px-4 md:px-14 py-2 md:py-4 mt-6 font-medium
+              hover:bg-[#004FA6] hover:outline hover:outline-2 hover:outline-white text-lg md:text-2xl
                 cursor-pointer hover:text-white transition duration-300">
             Take a Tour
           </button>
