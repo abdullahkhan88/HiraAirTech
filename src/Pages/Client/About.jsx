@@ -68,7 +68,7 @@ const About = () => {
                                 />
 
                                 <div className="absolute text-center animate__animated animate__fadeInUp">
-                                    <h4 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#004FA6]">
+                                    <h4 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-[#004FA6] ${index == 1 ? "pt-4": ""}`}>
                                         <CountUp
                                             end={item.value}
                                             duration={2}
@@ -76,7 +76,7 @@ const About = () => {
                                             scrollSpyOnce
                                         />
                                     </h4>
-                                    <p className="text-[#7d7f85] text-xs md:text-sm">
+                                    <p className="text-[#7d7f85] text-xs leading-tight px-1 md:px-0 md:text-sm">
                                         {item.label}
                                     </p>
                                 </div>

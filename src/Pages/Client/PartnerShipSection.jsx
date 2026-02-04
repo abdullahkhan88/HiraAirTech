@@ -3,7 +3,7 @@ import img2 from '../../assets/PartnershipAssets/Asset-52.png';
 
 const PartnerShipSection = () => {
   return (
-    <section className="w-full bg-gray-200 py-12 border-t border-b md:py-24">
+    <section className="w-full bg-white py-12 border-t border-b md:py-24">
       <div className="max-w-7xl mx-auto  px-4">
  
         {/* TOP CONTENT */}

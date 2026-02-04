@@ -1,5 +1,6 @@
 import card1 from "../../assets/Testimonial/Asset-36.png";
 import reachImg from "../../assets/Testimonial/Asset-33.png";
+import reachImgMobile from "../../assets/Testimonial/Asset-20.png"; 
 
 
 
@@ -8,13 +9,18 @@ const Testimonials = () => {
         <>
 
             {/* second sections */}
-            <section className="w-full md:h-[100vh] h-[30vh] relative">
+            <section className="w-full h-[32vh] md:h-[100vh]  relative">
 
                 {/* BACKGROUND IMAGE */}
                 <img
                     src={reachImg}
                     alt="Reach Out Today"
-                    className="w-full h-full object-cover md:object-cover"
+                    className="w-full h-full object-cover md:object-cover hidden md:block"
+                />
+                <img
+                    src={reachImgMobile}
+                    alt="Reach Out Today"
+                    className="w-full h-full object-cover md:object-cover block md:hidden"
                 />
 
                 {/* OVERLAY */}
@@ -26,18 +32,18 @@ const Testimonials = () => {
                     <div className="">
 
                         {/* HEADING */}
-                        <h2 className="text-[#004FA6] text-2xl tracking-tight md:text-5xl font-semibold">
+                        <h2 className="hidden md:block text-[#004FA6] text-2xl tracking-tight md:text-5xl font-semibold">
                             Let’s discuss your project
                         </h2>
 
                         {/* PARAGRAPH */}
-                        <p className="text-gray-800 max-w-xs md:max-w-xl leading-tight text-xs md:text-2xl mt-4 ">
+                        <p className="hidden md:block text-gray-900 max-w-xs md:max-w-xl leading-tight text-xs md:text-2xl mt-4 ">
                             Share your requirement with us. Our team will review the
                             scope and provide a clear project quotation.
                         </p>
 
                         {/* BUTTON */}
-                        <button className="bg-[#004FA6] md:text-xs lg:text-xl text-white mt-8 px-3 md:px-6 py-2 md:py-3 cursor-pointer
+                        <button className=" hidden md:block bg-[#004FA6] text-xs md:text-md lg:text-xl text-white mt-8 px-2 md:px-6 py-3 md:py-3 cursor-pointer
                         ">
                             Request a Quotation
                         </button>

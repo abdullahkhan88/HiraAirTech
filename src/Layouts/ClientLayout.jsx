@@ -19,9 +19,9 @@ const ClientLayout = () => {
       <footer className="bg-[#004FA6] text-white py-10 md:py-16">
         <hr className="hidden md:block text-[#71b6e4]" />
         {/* TOP FOOTER */}
-        <div className="max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-10">
           {/* QUICK LINKS */}
-          <div className="md:py-6 px-8 md:border-l-1 border-[#71b6e4]">
+          <div className="hidden md:block md:py-6 px-8 md:border-l-1 border-[#71b6e4]">
             <h3 className="font-bold text-md md:text-lg mb-4">QUICK LINKS</h3>
             <ul className="space-y-2 text-md">
               <li className="hover:underline cursor-pointer">About Us</li>

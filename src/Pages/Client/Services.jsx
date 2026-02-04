@@ -43,7 +43,7 @@ const Services = () => {
               </p>
 
               <h2 className="text-3xl md:text-2xl lg:text-4xl font-bold
-               text-gray-900 leading-thin mb-3 md:space-y-4">
+               text-gray-900 leading-tight mb-4 md:space-y-4">
                 Core technical works
                 delivered with precision
                 and accountability
@@ -51,7 +51,7 @@ const Services = () => {
             </div>
 
             {/* RIGHT */}
-            <div >
+            <div className="pt-4 md:pt-0">
               <p className="text-gray-900 mb-6 leading-tight text-center lg:text-left text-md sm:text-2xl">
                 We deliver HVAC systems, fire fighting services, and
                 false ceiling works for commercial and industrial
