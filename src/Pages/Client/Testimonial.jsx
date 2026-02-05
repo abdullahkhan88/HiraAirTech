@@ -1,6 +1,6 @@
 import card1 from "../../assets/Testimonial/Asset-36.png";
 import reachImg from "../../assets/Testimonial/Asset-33.png";
-import reachImgMobile from "../../assets/Testimonial/LastBanner.jpg"; 
+import ImgMobile from "../../assets/Testimonial/mobileBanner.png"; 
 import EnquiryForm from "../../Pages/Client/EnquiryForm.jsx";
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const Testimonials = () => {
         <>
 
             {/* second sections */}
-            <section className="w-full h-[32vh] md:h-[100vh]  relative">
+            <section className="w-full h-[71vh] md:h-[100vh]  relative">
 
                 {/* BACKGROUND IMAGE */}
                 <img
@@ -28,14 +28,14 @@ const Testimonials = () => {
                     className="w-full h-full object-cover md:object-cover hidden md:block"
                 />
                 <img
-                    src={reachImgMobile}
+                    src={ImgMobile}
                     alt="Reach Out Today"
-                    className="w-full h-full object-cover md:object-cover block md:hidden"
+                    className="w-full h-full object-contain block md:hidden"
                 />
 
                 {/* OVERLAY */}
                 <div className="absolute
-                        left-7 top-40
+                        left-7 top-48
                         sm:left-8 sm:top-10
                         md:left-20 md:top-20
                         lg:left-30 lg:top-28">
@@ -53,8 +53,8 @@ const Testimonials = () => {
                         </p>
 
                         {/* BUTTON */}
-                        <button onClick={handleQuations} className="bg-[#004FA6] text-xs md:text-md lg:text-xl 
-                        text-white mt-8 px-1.5 md:px-6 py-1.5 md:py-3 cursor-pointer
+                        <button onClick={handleQuations} className="bg-[#004FA6] text-sm md:text-lg lg:text-xl 
+                        text-white px-2 md:px-6 py-3 md:py-3 cursor-pointer
                         ">
                             Request a Quotation
                         </button>

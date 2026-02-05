@@ -38,7 +38,7 @@ const EnquiryForm = () => {
       <div className="max-w-5xl w-full bg-white/80 backdrop-blur-xl shadow-2xl overflow-hidden grid md:grid-cols-2">
 
         {/* Left Content */}
-        <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-10 flex flex-col justify-center">
+        <div className="bg-gradient-to-br from-[#004EA5] to-[#004EA5] text-white p-10 flex flex-col justify-center">
           <h2 className="text-4xl font-bold mb-4">
             Let’s discuss your project scope
           </h2>
@@ -153,7 +153,7 @@ const EnquiryForm = () => {
             {/* Submit */}
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl"
+              className="w-full bg-[#004EA5] hover:bg-blue-800 text-white py-3 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl"
             >
               Submit Requirement
             </button>
@@ -173,7 +173,7 @@ const EnquiryForm = () => {
           transition: all 0.2s ease;
         }
         .input:focus {
-          border-color: #2563eb;
+          border-color: #0510a6;
           box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
         }
         .label {

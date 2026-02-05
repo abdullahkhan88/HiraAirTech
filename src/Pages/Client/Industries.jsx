@@ -1,13 +1,13 @@
-import img1 from '../../assets/IndustriesAssets/Asset-30.png';
-import img2 from '../../assets/IndustriesAssets/Asset-32.png';
-import img3 from '../../assets/IndustriesAssets/Asset-30.png';
-import img4 from '../../assets/IndustriesAssets/Asset-32.png';
+import mall from '../../assets/IndustriesAssets/Asset-30.png';
+import commericial from '../../assets/IndustriesAssets/Commercial.png';
+import hospital from '../../assets/IndustriesAssets/Hospital.png';
+import industrial from '../../assets/IndustriesAssets/Asset-32.png';
 
 const Industries = () => {
   const data = [
     {
       title: "Commercial Buildings",
-      img: img1,
+      img: commericial,
       desc: `We execute HVAC, fire-fighting, and ceiling works
              for offices and commercial spaces, with a focus on
              thermal comfort, safety compliance, clean finishes,
@@ -17,7 +17,7 @@ const Industries = () => {
     },
     {
       title: "Healthcare & Institutions",
-      img: img2,
+      img:hospital,
       desc: `Hospitals and institutional buildings demand
              precise execution and uninterrupted performance.
              We deliver HVAC, fire safety, and ceiling works with
@@ -27,7 +27,7 @@ const Industries = () => {
     },
     {
       title: "Retail & Public Spaces",
-      img: img3,
+      img: mall,
       desc: `In malls and high-footfall public spaces, we
             execute integrated services that balance comfort,
             safety, and aesthetics, ensuring efficient air
@@ -37,7 +37,7 @@ const Industries = () => {
     },
     {
       title: "Industrial Facilities",
-      img: img4,
+      img: industrial,
       desc: `For factories and industrial units, we deliver
             systems designed for higher loads, durability, and
             safety compliance, coordinating closely with plant

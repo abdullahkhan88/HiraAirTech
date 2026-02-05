@@ -1,5 +1,5 @@
 import clientImage from "../../assets/OurClient/clinet.png";
-import clientMobileImage from "../../assets/OurClient/ClientPage.jpg";
+import mobileClient from "../../assets/OurClient/mobileClient.png";
 
 import clientLogo from "../../assets/OurClient/Asset-35.png";
 
@@ -13,7 +13,7 @@ const OurClient = () => {
       {/* mobile Image */}
       <div className="block lg:hidden">
         <img
-          src={clientMobileImage}
+          src={mobileClient}
           alt="Our Client Mobile"
           className="w-full h-auto object-contain px-4"
         />
