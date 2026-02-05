@@ -1,71 +1,66 @@
-import card1 from "../../assets/Testimonial/Asset-36.png";
 import reachImg from "../../assets/Testimonial/Asset-33.png";
 import ImgMobile from "../../assets/Testimonial/mobileBanner.png"; 
-import EnquiryForm from "../../Pages/Client/EnquiryForm.jsx";
 import { useNavigate } from "react-router-dom";
 
-
-
 const Testimonials = () => {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  const handleQuations = () => {
+    navigate("/enquiryform");
+  };
 
-    const handleQuations = () =>{
-        navigate('/enquiryform')
-    }
+  return (
+    <section className="w-full h-[70vh] md:h-screen relative">
 
+      {/* DESKTOP IMAGE */}
+      <img
+        src={reachImg}
+        alt="Reach Out Today"
+        className="hidden md:block w-full h-full object-cover"
+      />
 
-    return (
-        <>
+      {/* MOBILE IMAGE */}
+      <img
+        src={ImgMobile}
+        alt="Reach Out Today"
+        className="block md:hidden w-full h-full object-cover"
+      />
 
-            {/* second sections */}
-            <section className="w-full h-[71vh] md:h-[100vh]  relative">
+      {/* OVERLAY */}
+      <div
+        className="
+          absolute 
+          bottom-75 left-8 right-4 
+          md:bottom-auto md:left-20 md:top-20 md:right-auto
+        "
+      >
+        {/* TEXT (DESKTOP ONLY) */}
+        <h2 className="hidden md:block text-[#004FA6] text-5xl font-semibold">
+          Let’s discuss your project
+        </h2>
 
-                {/* BACKGROUND IMAGE */}
-                <img
-                    src={reachImg}
-                    alt="Reach Out Today"
-                    className="w-full h-full object-cover md:object-cover hidden md:block"
-                />
-                <img
-                    src={ImgMobile}
-                    alt="Reach Out Today"
-                    className="w-full h-full object-contain block md:hidden"
-                />
+        <p className="hidden md:block text-gray-900 mt-4 text-2xl max-w-xl">
+          Share your requirement with us. Our team will review the scope and
+          provide a clear project quotation.
+        </p>
 
-                {/* OVERLAY */}
-                <div className="absolute
-                        left-7 top-48
-                        sm:left-8 sm:top-10
-                        md:left-20 md:top-20
-                        lg:left-30 lg:top-28">
-                    <div className="">
-
-                        {/* HEADING */}
-                        <h2 className="hidden md:block text-[#004FA6] text-2xl tracking-tight md:text-5xl font-semibold">
-                            Let’s discuss your project
-                        </h2>
-
-                        {/* PARAGRAPH */}
-                        <p className="hidden md:block text-gray-900 max-w-xs md:max-w-xl leading-tight text-xs md:text-2xl mt-4 ">
-                            Share your requirement with us. Our team will review the
-                            scope and provide a clear project quotation.
-                        </p>
-
-                        {/* BUTTON */}
-                        <button onClick={handleQuations} className="bg-[#004FA6] text-sm md:text-lg lg:text-xl 
-                        text-white px-2 md:px-6 py-3 md:py-3 cursor-pointer
-                        ">
-                            Request a Quotation
-                        </button>
-
-                    </div>
-                </div>
-
-            </section>
-        </>
-    );
+        {/* BUTTON (MOBILE + DESKTOP) */}
+        <button
+          onClick={handleQuations}
+          className="
+            mt-4 
+            bg-[#004FA6] 
+            text-white 
+            text-sm md:text-lg 
+            px-4 md:px-6 
+            py-2 md:py-3 
+          "
+        >
+          Request a Quotation
+        </button>
+      </div>
+    </section>
+  );
 };
 
 export default Testimonials;
-
