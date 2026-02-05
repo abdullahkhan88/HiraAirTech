@@ -1,7 +1,7 @@
 import mall from '../../assets/IndustriesAssets/Mall.png';
 import commericial from '../../assets/IndustriesAssets/Commercial.png';
 import hospital from '../../assets/IndustriesAssets/Hospital.png';
-import industrial from '../../assets/IndustriesAssets/industrial.png';
+import industrial from '../../assets/IndustriesAssets/Industrial.png';
 
 const Industries = () => {
   const data = [
