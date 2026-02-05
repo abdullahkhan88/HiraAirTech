@@ -1,7 +1,7 @@
-import mall from '../../assets/IndustriesAssets/Asset-30.png';
+import mall from '../../assets/IndustriesAssets/Mall.png';
 import commericial from '../../assets/IndustriesAssets/Commercial.png';
 import hospital from '../../assets/IndustriesAssets/Hospital.png';
-import industrial from '../../assets/IndustriesAssets/Asset-32.png';
+import industrial from '../../assets/IndustriesAssets/industrial.png';
 
 const Industries = () => {
   const data = [
@@ -77,13 +77,13 @@ const Industries = () => {
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-20 place-items-center md:place-items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-12 lg:gap-20 place-items-center md:place-items-start">
             {data.map((item, index) => (
               <div key={index} className="max-w-sm">
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto md:h-[58vh] object-cover"
                 />
 
                 <h3 className="text-2xl font-semibold text-[#004FA6] mt-4">
