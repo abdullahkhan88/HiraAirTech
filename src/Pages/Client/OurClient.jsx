@@ -11,7 +11,7 @@ const OurClient = () => {
                  flex items-center justify-center py-10 md:py-30"
     >
       {/* mobile Image */}
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <img
           src={clientMobileImage}
           alt="Our Client Mobile"
@@ -19,7 +19,7 @@ const OurClient = () => {
         />
       </div>
       {/* Desktop Image */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <img
           src={clientImage}
           alt="Our Client Desktop"
@@ -29,7 +29,7 @@ const OurClient = () => {
       </div>
 
       {/* Text on Image */}
-      <div className="hidden md:block absolute top-12 md:top-55 left-0 md:left-50 max-w-2xl md:max-w-4xl px-6">
+      <div className="hidden lg:block absolute top-12 md:top-55 left-0 md:left-50 max-w-2xl md:max-w-4xl px-6">
         <h2 className="text-lg px-4 md:px-0 md:text-5xl tracking-tight font-semibold mb-1 md:mb-3 text-[#004fa6]">
           Our Clients
         </h2>

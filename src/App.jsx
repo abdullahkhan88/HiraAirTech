@@ -20,6 +20,7 @@ import Industries from "./Pages/Client/Industries.jsx";
 import EnquiryForm from "./Pages/Client/EnquiryForm.jsx";
 
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -35,6 +36,7 @@ function App() {
           <Route path="partner" element={<PartnerShipSection />} />
           <Route path="industries" element={<Industries />} />
           <Route path="enquiryform" element={<EnquiryForm />} />
+          <Route path="Contact" element={<EnquiryForm />} />
 
 
         </Route>

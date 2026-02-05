@@ -20,7 +20,7 @@ const About = () => {
                 <div className="flex justify-center lg:justify-start">
                     <div className="flex flex-col w-full lg:max-w-md md:py-0 lg:py-10">
 
-                        <h1 className="text-md sm:text-base md:text-lg px-0 md:px-10 font-semibold text-white
+                        <h1 className="text-md sm:text-base md:text-lg px-0 lg:px-10 font-semibold text-white
                                  lg:text-left">
                             ABOUT US
                         </h1>
@@ -31,19 +31,19 @@ const About = () => {
                 {/* RIGHT SIDE */}
                 <div className="w-full py-0  md:py-6 lg:py-12">
 
-                    <p className="text-white text-md md:text-lg leading-tight md:leading-relaxed mb-4 md:text-left">
+                    <p className="text-white text-md md:text-lg lg:text-lg leading-tight md:leading-tight mb-6 md:text-left">
                         Hira Airtek began its journey in 2011 as Rasool Engineers, with a clear
                         focus on HVAC execution. Based in Lucknow, we have grown steadily
                         through disciplined execution and responsible project delivery.
                     </p>
 
-                    <p className="text-white text-md md:text-lg leading-tight md:leading-relaxed mb-4  md:text-left">
+                    <p className="text-white text-md md:text-lg lg:text-lg leading-tight md:leading-tight mb-6  md:text-left">
                         Today, operating as Hira Airtek, we provide HVAC systems, fire fighting
                         services, and false ceiling works, offering clients a single, coordinated
                         partner for essential building services.
                     </p>
 
-                    <p className="text-white text-md md:text-lg leading-tight md:leading-relaxed mb-8 md:text-left">
+                    <p className="text-white text-md md:text-lg leading-tight md:leading-tight mb-8 md:text-left">
                         Backed by a team of skilled professionals and years of hands-on
                         industry experience, we remain committed to reliability, quality
                         workmanship, and long-term client satisfaction.
@@ -59,7 +59,7 @@ const About = () => {
                             <div
                                 key={index}
                                 className="relative flex items-center justify-center
-                                    sm:h-36 md:h-40 lg:h-44"
+                                    sm:h-36 md:h-48 lg:h-44"
                             >
                                 <img
                                     src={symbolimage}
@@ -68,7 +68,7 @@ const About = () => {
                                 />
 
                                 <div className="absolute text-center animate__animated animate__fadeInUp">
-                                    <h4 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-[#004FA6] ${index == 0 || index==1 ? "pt-2": ""}`}>
+                                    <h4 className={`text-4xl md:text-5xl lg:text-7xl font-bold text-[#004FA6] ${index == 0 || index==1 ? "pt-2": ""}`}>
                                         <CountUp
                                             end={item.value}
                                             duration={2}

@@ -52,7 +52,7 @@ const Serve = () => {
             style={{ transform: `translateX(-${index * 100}%)` }}
           >
             {slides.map((img, i) => (
-              <div key={i} className="w-full h-full flex-shrink-0 mt-12 px-6">
+              <div key={i} className="w-full h-[30vh] md:h-full flex-shrink-0 mt-12 px-4 md:px-6">
                 <img
                   src={img}
                   alt="service"
